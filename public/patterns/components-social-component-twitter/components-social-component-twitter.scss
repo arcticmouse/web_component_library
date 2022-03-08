@@ -1,0 +1,62 @@
+component.twitter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include rem-fallback(line-height, 22px);
+    @include rem-fallback(margin-bottom, 10px);
+
+    .twitter-icon {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        background-color: $twitter_blue;
+        color: $white;
+        @include rem-fallback(font-size, 25px);
+        @include rem-fallback(width, 40px);
+        @include rem-fallback(height, 40px);
+        @include rem-fallback(border-radius, 40px);
+    }
+
+    .twitter-handle {
+        a, a:visited {
+            font-family: $freight-sans;
+            font-weight: 700;
+            letter-spacing: 1px;
+            @include rem-fallback(font-size, 12px);
+            color: $berkeley_blue;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include rem-fallback(line-height, 50px);
+            &:hover {
+                color: $black;
+                text-decoration: underline;
+            }
+        }  
+    }
+
+    .twitter-item {
+        .twitter-content {
+            font-family: $freight-serif;
+            line-height: 1.4;
+            @include rem-fallback(font-size, 20px);
+            a, a:visited {
+                text-decoration: none;
+                color: $berkeley_blue;
+            }
+        }
+        .twitter-time {
+            @include rem-fallback(font-size, 14px);
+            @include rem-fallback(line-height, 18px);
+            text-align: center;
+            color: $text_gray;
+        }
+    }     
+}

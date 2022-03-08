@@ -1,0 +1,236 @@
+footer {
+    display: grid;
+    width: 100%;
+    margin: 0 0;
+    grid-template-rows: repeat(1, 320px);
+    background-color: $berkeley_blue;
+  
+    @include max-small-width { grid-template-rows: repeat(1, 940px); }
+  
+    .content-container {
+      display: grid;
+      grid-template-columns: 58% 42%;
+      grid-template-rows: repeat(16, 20px);
+      grid-template-areas: "footer-logo footer-menu" "footer-copyright footer-copyright";
+  
+      @include max-small-width {
+        grid-template-rows: repeat(94, 10px);
+        grid-template-columns: 1fr;
+      }
+      .footer-logo {
+        grid-area: "footer-logo";
+        grid-row: 2 / 13;
+  
+        @include max-small-width { grid-row: 2 / 20; }
+  
+        img {
+          @include rem-fallback(margin, 10px, 0, 20px, -10px);
+          @include rem-fallback(max-width, 200px);
+        }
+        ul.footer-social {
+          display: flex;
+          justify-content: flex-start;
+          list-style-type: none;
+          @include rem-fallback(padding-left, 0px);
+          li {
+            @include rem-fallback(width, 36px);
+            @include rem-fallback(height, 36px);
+            a {
+              @include rem-fallback(font-size, 21px);
+              color: $pale_gray;
+              text-decoration: none;
+              &:hover {
+                background: transparent;
+                color: $steel_gray;
+              }
+            }
+          }
+        }
+      }
+      .footer-menu {
+  
+        @include max-small-width { grid-row: 20 / 90; }
+  
+        .external-url:before {
+          @include rem-fallback(font-size, 8px);
+          align-self: center;
+          display: flex;
+        }
+  
+        ul.footer-primary-menu {
+  
+          @include max-small-width { display: block; }
+  
+          li {
+            a {
+  
+              @include max-small-width{
+                font-weight: 600;
+                @include rem-fallback(font-size, 18px);
+                @include rem-fallback(padding, 10px, 7px);
+              }
+  
+              &:hover {
+                background: transparent;
+                color: $steel_gray;
+  
+                @include max-small-width { background-color: $hover_berkeley_blue; }
+  
+              }
+              display: flex;
+              align-content: flex-start;
+              color: $pale_gray;
+              text-decoration: none;
+              @include rem-fallback(font-size, 13px);
+              font-weight: 600;
+              @include rem-fallback(padding, 5px, 10px);
+              @include rem-fallback(line-height, 22px);
+  
+              span.external-url {
+                padding: 0;
+  
+                &::before {
+                  display: inline-flex;
+                  vertical-align: baseline;
+                }
+              }
+            }
+          }
+          display: flex;
+          justify-content: start;
+          list-style-type: none;
+          padding: 0;
+          @include rem-fallback(margin, 10px, 0, 0);
+        }
+        ul.footer-left-menu {
+  
+          @include max-small-width { width: 100%; }
+  
+          li {
+            a {
+  
+              @include max-small-width {
+                color: $pale_gray;
+                @include rem-fallback(padding, 7px);
+                @include rem-fallback(font-size, 15px);
+              }
+  
+              &:hover {
+                background: transparent;
+                color: $steel_gray;
+  
+                @include max-small-width { background-color: $hover_berkeley_blue; }
+  
+              }
+              display: flex;
+              align-content: flex-start;
+              color: $pale_gray;
+              text-decoration: none;
+              @include rem-fallback(font-size, 15px);
+              font-weight: 600;
+              @include rem-fallback(padding, 5px, 10px);
+              @include rem-fallback(line-height, 22px);
+              font-weight: normal;
+  
+              span.external-url {
+                padding: 0;
+  
+                &::before {
+                  display: inline-flex;
+                  vertical-align: baseline;
+                }
+              }
+            }
+          }
+          list-style: none;
+          width: 50%;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+        }
+        ul.footer-right-menu {
+  
+          @include max-small-width { width: 100%; }
+  
+          li {
+            a {
+  
+              @include max-small-width {
+                color: $pale_gray;
+                @include rem-fallback(padding, 7px);
+                @include rem-fallback(font-size, 15px);
+              }
+  
+              &:hover {
+                background: transparent;
+                color: $steel_gray;
+  
+                @include max-small-width { background-color: $hover_berkeley_blue; }
+  
+              }
+              display: flex;
+              align-content: flex-start;
+              color: $pale_gray;
+              text-decoration: none;
+              @include rem-fallback(font-size, 15px);
+              font-weight: 600;
+              @include rem-fallback(padding, 5px, 10px);
+              @include rem-fallback(line-height, 22px);
+              font-weight: normal;
+  
+              span.external-url {
+                padding: 0;
+  
+                &::before {
+                  display: inline-flex;
+                  vertical-align: baseline;
+                }
+              }
+            }
+          }
+          list-style: none;
+          width: 50%;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+        }
+        grid-area: "footer-menu";
+        grid-row: 2 / 13;
+        .footer-secondary-menus {
+          display: flex;
+          justify-content: center;
+  
+          @include max-small-width { flex-direction: column; }
+  
+        }
+        hr {
+          @include rem-fallback(margin-top, 10px);
+          @include rem-fallback(margin-bottom, 10px);
+          border: 0;
+          border-top: 1px solid rgba(255,255,255,.1);
+          width: auto;
+        }
+      }
+      .footer-copyright {
+        grid-area: "footer-copyright";
+        grid-row: 15 / 16;
+        color: $pale_gray;
+  
+        @include max-small-width { grid-row: 91 / 93; }
+  
+        .textwidget {
+          p {
+            margin: 0;
+            color: inherit;
+            @include rem-fallback(font-size, 12px);
+          }
+        }
+  
+      }
+    }
+  }
+  

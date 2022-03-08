@@ -1,0 +1,20 @@
+{
+    "component":{
+        "rss_link": "https://news.berkeley.edu/feed/",
+        "rss_title": "Berkeley News",
+        "items": {
+            "item1": {
+                "link": "https://news.berkeley.edu/2021/07/13/galactic-gamma-ray-bursts-predicted-last-year-show-up-on-schedule/",
+                "title": "Galactic gamma ray bursts predicted last year show up on schedule"
+            },
+            "item2": {
+                "link": "https://news.berkeley.edu/2021/07/12/welcome-back-to-campus-together-we-have-risen-to-the-occasion/",
+                "title": "Welcome back to campus: &#8216;Together we have risen to the occasion&#8217;"
+            },
+            "item3": {
+                "link": "https://news.berkeley.edu/2021/07/09/podcast-carol-christ-on-women-in-the-academy-revisiting/",
+                "title": "Chancellor Carol Christ: &#8216;I always felt like a pioneer&#8217;"
+            }
+        }
+    }
+}

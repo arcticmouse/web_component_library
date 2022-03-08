@@ -1,0 +1,131 @@
+component.photo_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    @include rem-fallback(grid-row-gap, 3px);
+    @include rem-fallback(grid-column-gap, 10px);
+    justify-content: left;
+    @include rem-fallback(padding-bottom, 25px);
+
+    .grid-img {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        
+        img {
+            object-fit: cover;
+        }
+
+        &:hover {
+            img { opacity: .5; }
+        }
+
+        &.clicked {
+            overflow: visible;
+            @include rem-fallback(height, 725px);
+
+            @include max-med-width {
+                @include rem-fallback(height, 820px);
+            }
+
+            @include max-small-width {
+                @include rem-fallback(height, 750px);
+            }
+            
+
+            img { 
+                @include rem-fallback(min-height, 250px); 
+                opacity: .5;
+                max-height: 24rem;
+                align-self: center;
+            }
+
+            .photo-grid-details {
+                background: $lawrence;
+                height: 27rem;
+                z-index: 5;
+                position: absolute;
+
+                @include max-small-width {
+                    height: auto;
+                }
+
+                button.photo-grid-details-close {
+                    margin-left: 96%;
+                    background: none;
+                    border: none;
+                    font-size: 2rem;
+                    color: white;
+                    padding: .5rem;
+                    cursor: pointer;
+
+                    @include max-small-width {
+                        margin-left: 90%;
+                    }
+                }
+
+                .photo-grid-inner-details {
+                    padding: 2rem;
+                    overflow: hidden;
+                    display: flex;
+                    grid-gap: 10%;
+                    margin-top: -4rem;
+
+                    @include max-med-width {
+                        grid-gap: 5%;
+                    }
+
+                    @include max-small-width {
+                        margin-bottom: -2rem;
+                        grid-gap: 0;
+                        flex-direction: column;
+                    }
+
+                    .photo-grid-inner-details-left { 
+                        flex-grow: 1; 
+                        height: 24rem;
+                        width: auto;
+                        min-height: auto;
+                        min-width: auto;
+                        text-align: right;
+                        display: flex;
+                        flex-direction: column;
+
+                        @include max-small-width {
+                            display: none;
+                        }
+                        
+                        img { 
+                            opacity: 1; 
+                            width: auto;
+                        }
+
+                        p {
+                            text-align: center;
+                            @include rem-fallback(font-size, 12px);
+                        }
+
+                    }
+
+                    .photo-grid-inner-details-right {
+                        h3 { 
+                            color: $white; 
+                            @include rem-fallback(font-size, 42px);
+                            line-height: 1;
+                            font-weight: 300; 
+
+                            @include max-med-width {
+                                @include rem-fallback(font-size, 22px);
+                            }
+                        }
+                        p { 
+                            color: $ion; 
+                            font-weight: 500;
+                            @include rem-fallback(font-size, 18px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+body.page-template-page-masonry {
+    .main-grid {
+        component.masonry {
+            &.promo {
+                background-image: none;
+
+                a {
+                    h3 { text-decoration: underline; }
+                }
+
+                div { 
+                    padding: 1rem;
+
+                    h3 { line-height: 1.625rem; }
+                    p { padding: 0 1rem 1rem 1rem; } 
+                }
+
+                &.no-image {
+                    background-image: url('../../img/tessellation-bg-04.png'), url('../../img/tessellation-bg-08.png');
+                    background-position: right bottom, left bottom;
+                    background-repeat: no-repeat, no-repeat;
+
+                    div { flex: 0; }
+                }
+            }
+
+            &.video {
+                .caption {
+                    h3 { line-height: 1.7rem; }
+                }
+            }
+
+            &.infographic {
+                padding: 1.25rem 0;
+            }
+        }
+    }
+}

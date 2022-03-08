@@ -1,0 +1,29 @@
+{
+    "component":{
+        "total": "100",
+        "svg_height_width": "175",
+        "radius": "38",
+        "cxcy": "87.5",
+        "strokewidth": "76",
+        "slices":[
+            {
+                "value": "117",
+                "label": "Gold",
+                "color": "medalist",
+                "dash_array": ""
+            },
+            {
+                "value": "51",
+                "label": "Silver",
+                "color": "pacific",
+                "dash_array": "103.809148553 238.761041673"
+            },
+            {
+                "value": "39",
+                "label": "Bronze",
+                "color": "golden_gate",
+                "dash_array": "44.9839643731 238.761041673"
+            }
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+<header class="Hero takeover">
+	<div class="content-container">
+
+		<!-----Mobile------>
+		<div class="mobile-header">
+			{% include 'includes/mobile-header.twig' %}
+		</div>
+
+
+		<!-----Nav----->
+		<div class="navigation" aria-expanded="false">
+				<!-----Top Toolbar----->
+				{% include 'includes/menu.twig' with {items: menuToolbarLeft, class: 'left-toolbar'} %}
+				{% include 'includes/menu.twig' with {items: menuToolbarRight, class: 'right-toolbar'} %}
+				<form class="navbar-form" 
+                    role="search" 
+                    id="navbar-search"
+                    action="search" 
+                    method="get">
+                    <div class="form-group"><input type="search" class="form-control" name="q" title="search term" placeholder="Search Berkeley Web" aria-label="search term"></div><button type="submit" class="btn btn-default" aria-label="search" value="Search" role="button"><span class="fonta fa-search"></span></button>
+                </form>
+
+				<!-----Logo----->
+				<div class="title">
+					{{ header_logo_takeover }}
+				</div>
+
+				<!-----Menu----->
+				<div class="menu" id="main-nav">
+	
+				</div>
+		</div>
+
+	</div>
+
+	<!-----Hero----->
+<div class="hero homepage {{ img_align }}" style="background-image: {{ gradient }}, url('{{ header_image }}');">
+  {% if link %}<a href="{{ link }}">{% endif %}
+  <div class="content-container">
+    <div class="caption">
+      <h2 class="{{ band_template_color }}">{{ caption_head }}</h2>
+      {% if caption_text %}
+        <p><span class="{{ band_template_color }}">{{ caption_text }}</span></p>
+      {% endif %}
+    </div>
+  </div>
+  {% if img_credit %}
+    <span class="credit">{{ img_credit }}</span>
+  {% endif %}
+  {% if link %}</a>{% endif %}
+</div>
+</header>

@@ -1,0 +1,155 @@
+component.infographic {
+    background-color: $mobile-menu-background;
+    @include rem-fallback(padding, 20px);
+    
+    &.Pie {
+        display: grid;
+        grid-template-rows: 50% 30% 20%;
+        justify-items: center;
+        align-items: center;
+
+        .pie-chart {
+            width: 50%;
+            grid-row: 1;
+
+            .circle {
+                fill: none;
+                stroke: $mobile-menu-background;
+
+                &.berkeley_blue { stroke: $berkeley_blue; }
+                &.founders_rock { stroke: $founders_rock; }
+                &.california_gold { stroke: $california_gold; }
+                &.medalist { stroke: $medalist; }
+                &.wellman_tile { stroke: $wellman_tile; }
+                &.rose_garden { stroke: $rose_garden; }
+                &.golden_gate { stroke: $golden_gate; }
+                &.south_hall { stroke: $south_hall; }
+                &.bay_fog { stroke: $bay_fog; }
+                &.lawrence { stroke: $lawrence; }
+                &.lap_lane { stroke: $lap_lane; }
+                &.pacific { stroke: $pacific; }
+                &.sather_gate { stroke: $sather_gate; }
+                &.ion { stroke: $ion; }
+                &.soybean { stroke: $soybean; }
+                &.stone_pine { stroke: $stone_pine; }
+            }
+        }
+
+        .pie-key {
+            grid-row: 3;
+
+            width: 100%;
+
+            ul {
+                list-style: none;
+
+                li {
+                    width: 50%;
+                    float: left;
+                    @include rem-fallback(margin-bottom, 10px);
+
+                    &:before {
+                        content: '\2588';
+                        margin-right: 5px;
+                    }
+
+                    &.berkeley_blue { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $berkeley_blue; }
+                    }
+                    &.founders_rock { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $founders_rock; }
+                    }
+                    &.california_gold { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $california_gold; }
+                    }
+                    &.medalist { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $medalist; }
+                    }
+                    &.wellman_tile { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $wellman_tile; }
+                    }
+                    &.rose_garden { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $rose_garden; }
+                    }
+                    &.golden_gate { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $golden_gate; }
+                    }
+                    &.south_hall { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $south_hall; }
+                    }
+                    &.bay_fog { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $bay_fog; }
+                    }
+                    &.lawrence { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $lawrence; }
+                    }
+                    &.lap_lane { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $lap_lane; }
+                    }
+                    &.pacific { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $pacific; }
+                    }
+                    &.sather_gate { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $sather_gate; }
+                    }
+                    &.ion { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $ion; }
+                    }
+                    &.soybean { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $soybean; }
+                    }
+                    &.stone_pine { 
+                        color: $black;
+                        background: transparent;
+                        &:before { color: $stone_pine; }
+                    }
+                }
+            }
+        }
+
+        .caption {
+            grid-row: 2;
+
+            font-family: $freight-serif;
+            color: $menu_gray;
+            @include rem-fallback(font-size, 20px);
+            @include rem-fallback(line-height, 22px);
+            text-align: center;
+        }
+    }
+
+    a {
+        .caption { text-decoration: underline; }
+    }
+
+}

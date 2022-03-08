@@ -1,0 +1,11 @@
+{
+    "component":{
+        "modal_class": "videoComponentModal",
+        "video_image": "../../images/sathergate.jpg",
+        "video_credit": "UC Berkeley",
+        "video_caption": "Welcome New Bears!",
+        "video_id": "7-DhdMJYvCU",
+        "site_url": "https://berkeley.edu",
+        "video_url": "https://www.youtube.com/watch?v=7-DhdMJYvCU&ab_channel=UCBerkeley"
+    }
+}

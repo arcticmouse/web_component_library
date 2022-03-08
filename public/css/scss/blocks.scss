@@ -1,0 +1,193 @@
+@import "components/bulletlist";
+@import "components/event";
+@import "components/infographic";
+@import "components/infographicgrid";
+@import "components/modal";
+@import "components/photo";
+@import "components/photogrid";
+@import "components/promo";
+@import "components/quote";
+@import "components/rss";
+@import "components/slideshow";
+@import "components/thumblist";
+@import "components/twitter";
+@import "components/video";
+@import "components/videoplaylist";
+
+@import "partials/audience";
+@import "partials/alerts";
+
+main, 
+div {
+    p {
+        font-family: $freight-sans;
+        color: $menu_gray;        
+        @include rem-fallback(font-size, 18px);
+        @include rem-fallback(line-height, 22px);        
+
+        &.lead-text {
+            font-family: $freight-serif;
+            color: $text_gray; 
+            @include rem-fallback(font-size, 29px);
+        }
+    }
+
+    &.main-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    
+        @include rem-fallback(padding-top, 30px);
+        @include rem-fallback(margin-bottom, -30px);
+    
+        @include max-med-width {
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(6, auto);
+        }
+    
+        @include max-small-width {
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(12, auto);
+        }
+    }
+
+    .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+}
+
+body {
+    main#content {
+        background: url('../../img/tessellation-bg-03.png') no-repeat right bottom $site_background;
+    }
+}
+
+body.homepage-template-default {
+    main#content {
+        @include rem-fallback(padding, 30px, 0);
+
+        component {
+            @include rem-fallback(max-height, 340px);
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+body.page-template-default {
+    main
+        .content {
+            grid-template-columns: 100%;
+
+            .basic-content {
+                font-family: $freight-sans;
+                @include rem-fallback(font-size, 15px);
+                @include rem-fallback(line-height, 22px);
+                color: $menu_gray;
+        
+                h1, h2, h3, h4, h5, h6 {
+                    font-family: $freight-serif;
+                    font-weight: 400;
+                    line-height: 1.1;
+                    color: $berkeley-blue;
+                }
+            }
+    }
+}
+
+body.page-template-page-four_components {
+    main,
+    div {
+        &.main-grid{
+           grid-template-columns: repeat(4, 24%);
+           grid-template-rows: auto; 
+           grid-row-gap: 15px;
+
+           @include max-med-width {
+                grid-template-columns: repeat(3, 30%);
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+           }
+
+           @include max-small-width {
+                grid-template-columns: repeat(1, 100%);
+           }
+        }
+    }
+}
+
+body.page-template-page-three_components {
+    main,
+    div {
+        &.main-grid{
+           margin-bottom: 0;
+        }
+    }
+}
+
+body.page-template-page-two_column_thumblist, 
+body.page-template-page-two_column_content {
+    main{
+        .content {
+            width: 100%;
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 50% 40%;
+            grid-column-gap: 10%;
+
+            @include max-small-width {
+                grid-template-columns: repeat(1, 100%);
+                grid-column-gap: 0%;
+            }
+        }
+
+        .right { 
+            component { margin-bottom: 2rem; } 
+            div.infographic-group {
+                margin-top: 2rem;
+                margin-left: -.75rem;
+
+                component { margin-bottom: none; }
+            }
+        }
+    }
+}
+
+body.page-template-page-audience {
+    main{
+        .content {
+            @include max-small-width {
+                grid-template-columns: repeat(1, 100%);
+                grid-column-gap: 0%;
+            }
+
+            .left { 
+                @include max-small-width { grid-row: 2; } 
+
+                component.thumblist.two {
+                    .item {
+                        .left {
+                            @include max-small-width { grid-row: 1; } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.thumblist-template-default.single.single-thumblist {
+    main,
+    div {
+        &.main-grid{
+           grid-template-columns: 55% 45%;
+
+           @include max-small-width {
+                grid-template-columns: repeat(1, 100%);
+           }
+        }
+    }
+}

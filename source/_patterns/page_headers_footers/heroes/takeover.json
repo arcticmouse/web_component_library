@@ -1,0 +1,9 @@
+{
+    "img_align": "center",
+    "gradient": "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1))",
+    "link": "https://berkeley.edu",
+    "header_image": "../../images/IdaJackson.jpg",
+    "band_template_color": "wellman_tile",
+    "caption_head": "Ida Louise Jackson",
+    "caption_text": "In her own words"
+}

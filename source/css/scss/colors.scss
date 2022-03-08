@@ -1,0 +1,66 @@
+/*****brand colors*****/
+/*primary*/
+$berkeley_blue: #003262;
+$founders_rock: #3B7EA1;
+$california_gold: #FDB515;
+$medalist: #C4820E;
+/*secondary*/
+$wellman_tile: #D9661F;
+$rose_garden: #EE1F60;
+$golden_gate: #ED4E33;
+$south_hall: #6C3302;
+$bay_fog: #DDD5C7;
+$lawrence: #00B0DA;
+$lap_lane: #00A598;
+$pacific: #46535E;
+$sather_gate: #B9D3B6;
+$ion: #CFDD45;
+$soybean: #859438;
+$stone_pine: #584F29;
+
+$web_gray: #888888;
+$black: #000000;
+$white: #ffffff;
+
+/*****non brand colors*****/
+$site_background: #f8f8f8;
+$white_gray: #eeeeee;
+$pale_gray: #cccccc;
+$menu_border_gray: #dddddd;
+$text_gray: #555555; /*for lead text*/
+$steel_gray: #829db5; /*footer a*/
+$menu_gray: #333333; /*mega menu descriptions*/
+$caption_gray: #eaeaea; /*video component caption background*/
+$grey_background: rgba(102, 102, 102, 0.6); /*hero photo credit background*/
+$overlay_grey_background: rgba(0,0,0,.7); /*for image overlays*/
+
+$hover_berkeley_blue: #00284F; /*footer a hover small screen*/
+$mobile-menu-background: #f7f7f7; /*background of 'information for....' label
+
+/*****social*****/
+$twitter_blue: #1279bb;
+
+/*****background*****/
+.berkeley_blue { background-color: $berkeley_blue; }
+.founders_rock { background-color: $founders_rock; }
+.california_gold { background-color: $california_gold; }
+.medalist { background-color: $medalist; }
+
+.wellman_tile { background-color: $wellman_tile; }
+.rose_garden { background-color: $rose_garden; }
+.golden_gate { background-color: $golden_gate; }
+.south_hall { background-color: $south_hall; }
+.bay_fog { background-color: $bay_fog; }
+.lawrence { background-color: $lawrence; }
+.lap_lane { background-color: $lap_lane; }
+.pacific { background-color: $pacific; }
+.sather_gate { background-color: $sather_gate; }
+.ion { background-color: $ion; }
+.soybean { background-color: $soybean; }
+.stone_pine { background-color: $stone_pine; }
+
+.gray { background-color: $white_gray; }
+.web_gray { background-color: $web_gray; }
+
+.black { background-color: $black; }
+.white { background-color: $white; }

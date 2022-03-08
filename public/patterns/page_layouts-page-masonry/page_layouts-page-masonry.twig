@@ -1,0 +1,17 @@
+{% extends "includes/page_masonry-base.twig" %}
+
+{% block content %}
+  {% set count = 1 %}
+  {% for component in components %} 
+    {{ component.type }}
+    {% if component.type == 'Promo' %}
+      {% include 'includes/component-masonry_promo.twig' %}
+    {% endif %}
+    {% if component.type == 'Video' %}
+      {% include 'includes/component-masonry_video.twig' %}
+    {% endif %}   
+    {% if component.type == 'Infographic' %}
+      {% include 'includes/component-masonry_infographic.twig' %}
+    {% endif %}           
+  {% endfor %}
+{% endblock %}

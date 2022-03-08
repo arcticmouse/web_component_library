@@ -1,0 +1,45 @@
+	<body class="{{body_class}}" data-template="index.twig">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		{% include 'includes/header.twig' %}
+
+		<main class="content-container">
+			
+			{% if lead_text %}
+				<div>
+					<p class="lead-text">
+						{% block leadtext %}
+							{{ lead_text }}
+						{% endblock %}
+					</p>
+					<p>
+						{% block addleadtext %}
+							{{ add_lead_text }}
+						{% endblock %}
+					</p>
+				</div>
+			{% endif %}
+
+			<div class="content">
+                <div class="basic-content">
+                    {% block content %}
+                        {{ content }}
+						{{ lorem }}
+                    {% endblock %}
+                </div>
+			</div>
+
+		</main>
+
+		{% block fullwidth %}
+		<component class="promo rose_garden">
+			<div>
+				<h3>Optional Full Width Component Title</h3>
+				<p>Optional component across bottom, above footer, can be: Promo, Quote, Video Playlist, Photo Grid</p>
+			</div>
+		</component>
+		{% endblock %}
+
+		{% include 'page_headers_footers/footers/footer.twig' %}
+	</body>
+</html>

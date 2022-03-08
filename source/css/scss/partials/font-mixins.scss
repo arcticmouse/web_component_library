@@ -1,0 +1,39 @@
+/**********
+/*  font mixins
+**********/
+@mixin component-p {
+  font-family: $freight-sans;
+  color: $black;
+  @include rem-fallback(font-size, 18px);
+  @include rem-fallback(line-height, 22px);
+
+  cite { @include rem-fallback(font-size, 12px); }
+}
+  
+@mixin h3-mixin {
+  @include rem-fallback(font-size, 24px);
+  font-weight: 600;
+  font-family: $freight-serif;
+}  
+
+@mixin caption-mixin {
+  text-align: left;
+
+  h3 {
+      font-family: $freight-serif;
+      margin: 0;
+      @include rem-fallback(font-size, 20px);
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: $berkeley-blue;
+  }
+
+  p {
+      @include component-p;
+      @include rem-fallback(margin, 0, 0, 10px);
+  }
+}
+
+@mixin chevron-double-right { 
+  content: "\f324";
+}

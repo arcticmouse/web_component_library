@@ -1,0 +1,31 @@
+/**********
+/*  block mixins
+**********/
+
+/* style for chevron arrow in front of list items */
+@mixin block-bullet-style {
+    font-family: $fonta;
+    background: $california_gold;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+    text-indent: 0rem;
+    vertical-align: middle;
+    left: 0;
+    margin-right: .5rem;
+    @include rem-fallback(font-size, 9px); 
+    line-height: 16px;
+    @include rem-fallback(width, 14px);
+    @include rem-fallback(height, 14px); 
+    @include rem-fallback(border-radius, 30px);
+}
+
+@mixin block-nested-bullet-style {
+    font-family: $fonta;
+    background: #fff;
+    color: #ADADAD;
+    width: auto;
+    height: auto;
+    @include rem-fallback(font-size, 12px); 
+    @include chevron-double-right;
+}

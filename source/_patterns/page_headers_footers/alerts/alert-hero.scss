@@ -1,0 +1,61 @@
+.hero.homepage.alert {
+    background: $golden_gate;
+    .content-container {
+        .caption {
+            justify-content: center;
+            text-align: center;
+            width: 60%;
+            margin: auto auto;
+
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-column-gap: 5%;
+
+            span.fonta { 
+                grid-row: 1;
+                grid-column: 1;
+                text-align: right;
+                align-self: end;
+                margin-bottom: -15px;
+
+                color: $white; 
+                @include rem-fallback(font-size, 54px);
+                font-weight: 400;
+                @include rem-fallback(line-height, 32px);
+
+                @include max-med-width {
+                    @include rem-fallback(font-size, 44px);
+                    @include rem-fallback(line-height, 32px);	
+                }
+
+                @include max-small-width {
+                    @include rem-fallback(font-size, 28px);
+                    @include rem-fallback(line-height, 42px);
+                }
+            }
+
+            h2 {
+                grid-row: 1;
+                grid-column: 2;
+                text-align: left;
+                align-self: end;
+            }
+            
+            p {
+                grid-row: 2;
+                grid-column: 1/3;
+                text-align: left;
+                align-self: start;
+                justify-self: center;
+            }
+
+            @include max-small-width { 
+                h2, p {
+                    float: left;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

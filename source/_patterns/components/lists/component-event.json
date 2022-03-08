@@ -1,0 +1,28 @@
+{
+    "component":{
+        "heading_link": "https://events.berkeley.edu",
+        "heading": "This is an event title",
+        "more_text": "More campus events here",
+        "more_url": "https://news.berkeley.edu",
+        "events": {
+            "event1": {
+                "month": "July",
+                "day": "01",
+                "link": "https://events.berkeley.edu/",
+                "summary": "Lorem ipsum dolor sit amet"
+            },
+            "event2": {
+                "month": "July",
+                "day": "02",
+                "link": "https://events.berkeley.edu/",
+                "summary": "Etiam quam dui, vehicula condimentum placerat ac, porttitor sed ligula"
+            },
+            "event3": {
+                "month": "July",
+                "day": "03",
+                "link": "https://events.berkeley.edu/",
+                "summary": "Vestibulum non magna quis leo placerat sodales"
+            }                          
+        }
+    }
+}

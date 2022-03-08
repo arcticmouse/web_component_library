@@ -1,0 +1,10 @@
+<component class="block infographic {{ component.infographic_type }}{% if not component.infographic_link %} grid-style{% endif %}">
+    {% if component.infographic_link %}<a href="{{ component.infographic_link }}" class="grid-style">{% endif %}
+    
+    <div class="shape {{ component.infographic_shape }} {{ component.infographic_color }}">
+        <div class="amount{% if component.infographic_amount_size %} small{% endif %}">{{ component.infographic_amount }}</div>
+    </div>
+
+    <div class="caption">{{ component.infographic_caption }}{% if component.infographic_link %}{{ component.infographic_link }}{% endif %}</div>
+    {% if component.infographic_link %}</a>{% endif %}
+</component>

@@ -1,0 +1,14 @@
+{% extends "includes/page_two_column-base.twig" %}
+
+  {% block contentleft %}
+    <div class="left">
+    {% include 'components/lists/component-thumblist.twig' with {component:thumblist} %}
+    </div>
+  {% endblock %}
+
+  {% block contentright %}
+    <div class="right">
+        {% include 'misc/buttons/buttons.twig'  with {button:button}%}
+        {% include 'misc/search/searchbox.twig' %}
+    </div>
+  {% endblock %}

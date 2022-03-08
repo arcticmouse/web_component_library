@@ -1,0 +1,34 @@
+{% extends "includes/page_one_column-base.twig" %}
+
+{% block content %}
+  <component class="promo medalist">
+    <div>
+        <h3>Component Title</h3>
+        <p>Optional component below thumblist can be: promo, photo, quote, video, bullet list, infographic, widget, text box</p>
+    </div>
+  </component>
+
+  {% include 'components/infographics/component-infographic.twig' with {component:info1} %}
+
+  <component class="promo lap_lane">
+    <div>
+        <h3>Component Title</h3>
+        <p>Optional component below thumblist can be: promo, photo, quote, video, bullet list, infographic, widget, text box</p>
+    </div>
+  </component>
+
+  {% include 'components/infographics/component-infographic.twig' with {component:info2} %}
+
+  {% include 'components/infographics/component-infographic.twig' with {component:info3} %}
+
+  {% include 'components/infographics/component-infographic.twig' with {component:info4} %}
+{% endblock %}
+
+{% block fullwidth %}
+<component class="promo wellman_tile">
+  <div>
+      <h3>Optional Full Width Component Title</h3>
+      <p>Optional component across bottom, above footer, can be: Promo, Quote, Video Playlist, Photo Grid</p>
+  </div>
+</component>
+{% endblock %}

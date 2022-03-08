@@ -1,0 +1,33 @@
+{
+    "bodyClass": "page-template-page-three_components",
+    "lead_text": "Optional Lead Text",
+    "add_lead_text": "Optional Additional Lead Text", 
+    "info1":{
+        "infographic_type": "Icon",
+        "infographic_shape": "badge_ribbon",
+        "infographic_color": "berkeley_blue",
+        "infographic_amount": "#1",
+        "infographic_caption": "Public university worldwide: U.S. News & World Report"
+    },
+    "info2":{
+        "infographic_type": "Icon",
+        "infographic_shape": "heart",
+        "infographic_color": "rose_garden",
+        "infographic_amount": "350+",
+        "infographic_caption": "Degree programs at UC Berkeley"
+    },
+    "info3":{
+        "infographic_type": "Icon",
+        "infographic_shape": "circle",
+        "infographic_color": "soybean",
+        "infographic_amount": "17.8 to 1",
+        "infographic_caption": "Student-to-faculty ratio"
+    },
+    "info4":{
+        "infographic_type": "Icon",
+        "infographic_shape": "twelve_point_burst",
+        "infographic_color": "pacific",
+        "infographic_amount": "270",
+        "infographic_caption": "Number of community organizations with Berkeley student involvement"
+    }                  
+}

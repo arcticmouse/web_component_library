@@ -1,0 +1,139 @@
+/******************************
+** css for a modal window
+******************************/
+component {
+    div.modal-window {
+        opacity: 0;
+        transition: opacity .15s linear;
+    }
+
+    div.modal-window.show {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        background: $grey_background;
+        opacity: 1;
+
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            margin: auto auto;
+            width: 90vw;
+            height: 90vh;   
+            margin-top: 1%;         
+            @include rem-fallback(padding, 10px);
+
+            .modal-head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-bottom: 1px solid $menu_border_gray;
+                @include rem-fallback(padding, 15px, 15px, 0, 15px);
+                @include rem-fallback(min-height, 15px);
+
+                @include max-small-width { padding: none; }
+
+                .title {
+                    h4 {
+                        font-family: $freight-serif;
+                        @include rem-fallback(font-size, 18px);
+                        margin: 0;
+
+                        @include max-small-width { 
+                            @include rem-fallback(font-size, 15px); 
+                        }
+                    }
+                }
+
+                button {
+                    border: none;
+                    background-color: $white;
+                    font-size: 100%;
+                    color: $black;
+                    text-shadow: 0 1px 0 $white;
+                    font-weight: bold;
+                    opacity: .3;
+                    &:hover { opacity: .9; }
+                }
+            }
+
+            .modal-body {
+                flex-direction: row;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                margin-top: .5%;
+                overflow-y: hidden;
+
+                img { object-fit: contain; }
+            }
+
+        }
+    }
+
+    &.video {
+        div.modal-window {
+            .modal-content {
+                .modal-head {
+                    flex-wrap: wrap;
+                    @include rem-fallback(padding, 15px);
+                    .title { flex-basis: 90%; }
+                    button { flex-basis: 5%; }
+                    .transcript {
+                        color: $black;
+                        @include rem-fallback(margin, 10px, 0px);
+                        @include rem-fallback(font-size, 11.25px);
+                        &:visited { color: $black; }
+                    }
+                }
+    
+                .modal-body {
+                    width: 95%;
+                    margin: auto auto;
+                    @include rem-fallback(padding, 15px);
+    
+                    .email {
+                        display: none;
+                    }
+                }
+    
+                .modal-footer {
+                    @include rem-fallback(padding, 15px);
+                    display: flex;
+                    
+                    button {
+                        font-family: "fontello";
+                        font-style: normal;
+                        font-weight: normal;
+                        @include rem-fallback(font-size, 14px);
+                        display: inline-block;
+                        text-decoration: inherit;
+                        text-align: center;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1em;
+                        @include rem-fallback(padding, 6px, 12px);
+                        background: none;
+                        border: 1px solid $pale_gray;
+                        border-radius: 4px;
+                        color: $menu_gray;
+
+                        &.close-video-modal {
+                            font-family: $freight-sans;
+                            margin-left: auto;
+
+                            &:before {
+                                content: 'Close';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

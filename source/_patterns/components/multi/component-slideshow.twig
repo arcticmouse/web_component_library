@@ -1,0 +1,26 @@
+<component id="{{ component.title }}" class="slideshow">
+    <div class="controls">
+        <div class="arrow left">
+            <span class="fonta fa-chevron-left"></span>
+        </div>
+
+        <div class="dots">
+        {% for i in 1.. component.slide | length %}
+            <span class="{{ loop.index }}{% if loop.first %} active{% endif %}">{{ loop.index }}</span>  
+        {% endfor %}
+        </div>
+
+        <div class="arrow right">
+            <span class="fonta fa-chevron-right"></span>
+        </div>
+    </div>
+    {% for slide in component.slide %}
+        <div class="slide {{ loop.index }}{% if loop.first %} active{% endif %}">
+            <img src="{{ slide.img }}" alt="{{ slide.alt }}">
+            <div class="caption">
+                <p><cite>{{ slide.credit }}</cite></p>
+                <h3>{{ slide.caption }}</h3>
+            </div>
+        </div>
+    {% endfor %}
+</component>        

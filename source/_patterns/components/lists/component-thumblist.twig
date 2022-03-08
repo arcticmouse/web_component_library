@@ -1,0 +1,17 @@
+<component class="thumblist {{component.thumblist_col_number}}">
+  {% for item in component.thumblist_items %}
+  <div class="item{% if not item.thumblist_item_image %} no-image{% endif %}">
+  {% if item.thumblist_item_image %}
+  <div class="left">
+    <img src="{{ item.thumblist_item_image }}" />
+  </div>
+  {% endif %}
+  <div class="right">
+    {% if item.thumblist_item_link %}<a href="{{ item.thumblist_item_link }}">{% endif %}
+      <h2>{{ item.thumblist_item_title }}</h2>
+    {% if item.thumblist_item_link %}</a>{% endif %}
+   <p>{{ item.thumblist_item_copy }}</p>
+  </div>
+  </div>
+  {% endfor %}
+</component>     

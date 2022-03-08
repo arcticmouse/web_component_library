@@ -1,0 +1,27 @@
+{
+    "component": {
+        "caption": "Mark Bittman, Claire Kremen and the buzz about wild bees",
+        "video": {
+            "v1": {
+                "vp_youtube_url": "https://www.youtube.com/embed/DxbL3nFMBQY",
+                "vp_cover_photo": "../../images/video_playlist/BittmanKremen468.jpg",
+                "vp_caption": "Mark Bittman, Claire Kremen and the buzz about wild bees"
+            },
+            "v2": {
+                "vp_youtube_url": "https://www.youtube.com/embed/fiybcnZV_JQ",
+                "vp_cover_photo": "../../images/video_playlist/TalkVideo.jpg",
+                "vp_caption": "Bro talk, upspeak and vocal fry. Students weigh in on how we talk"
+            },
+            "v3": {
+                "vp_youtube_url": "https://www.youtube.com/embed/sRuZyqdnggs",
+                "vp_cover_photo": "../../images/video_playlist/VanHouweling468.jpg",
+                "vp_caption": "Law professor Molly Shaffer Van Houweling goes for a world record"
+            },
+            "v4": {
+                "vp_youtube_url": "https://www.youtube.com/embed/ZlFE3ZgziFc",
+                "vp_cover_photo": "../../images/video_playlist/WageJustice468.jpg",
+                "vp_caption": "Mark Bittman and Saru Jayaraman discuss wage justice for food workers"
+            }                                    
+        }
+    }
+}

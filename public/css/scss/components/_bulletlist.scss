@@ -1,0 +1,105 @@
+component.bullet_list {
+    display: flex;
+    flex-flow: column;
+
+    a:hover {
+        color: $black;
+        background-color: $white_gray;
+    }
+
+    h3 {
+        color: $berkeley_blue;
+        font-family: $freight-sans;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include rem-fallback(margin, 0px, 0px, 10px, 20px); 
+        @include rem-fallback(letter-spacing, 1px); 
+        @include rem-fallback(font-size, 12px); 
+    }
+
+    h2 { 
+        @include h3-mixin; 
+        margin-top: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0; 
+
+        &.bullets {
+            li {
+                &:before {
+                    @include block-bullet-style;
+                }
+
+                list-style-position: inside;
+
+                ul {
+                    margin-bottom: 0;
+                    @include rem-fallback(padding, 10px, 0px, 0px, 25px);
+                    li {
+                        @include rem-fallback(margin-right, 10px);
+                        &:before {
+                            @include block-nested-bullet-style;
+                        }
+                        &:last-of-type {
+                            padding-bottom: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.dot {
+            list-style-type: disc;
+            margin-top: 0;
+            li { padding-bottom: 0; }
+        }
+
+        li {
+            color: $berkeley_blue;
+            font: $freight-sans;
+            font-weight: 300;
+            @include rem-fallback(font-size, 18px); 
+            @include rem-fallback(line-height, 22px);
+            @include rem-fallback(padding-bottom, 20px); 
+
+            a { color: $berkeley_blue; }
+
+            ul {
+                margin-bottom: 0;
+                @include rem-fallback(padding, 10px, 0px, 0px, 25px);
+                li {
+                    @include rem-fallback(margin-right, 10px);
+                    &:before {
+                        @include block-nested-bullet-style;
+                    }
+                    &:last-of-type {
+                        padding-bottom: 0rem;
+                    }
+                }
+            }
+
+            p { margin-top: 0; }
+        }
+    }
+
+    .more-link {
+        align-self: center;
+
+        a {
+            @include rem-fallback(padding, 20px);
+            @include rem-fallback(line-height, 22px);
+            @include rem-fallback(font-size, 15px); 
+            color: $berkeley_blue;
+            border-top: 1px solid $menu_border_gray;
+            text-decoration: none;
+        }
+    }
+}
+
+.right {
+    component.bullet_list {
+        h3 { margin-left: 0;}
+    }
+}

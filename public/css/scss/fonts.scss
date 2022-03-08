@@ -1,0 +1,52 @@
+@import "../fonts/entypo.css";
+@import "partials/font-mixins.scss";
+
+/**********
+/*  font family
+**********/
+$freight-serif: "freight-micro-pro", Georgia, Constantia, Lucida Bright, Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$freight-sans: "freight-sans-pro",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+$dashicons: "dashicons";
+$fontello: "fontello";
+$fonta: 'Font Awesome 5 Pro', $freight-sans;
+$fonta-social: 'Font Awesome 5 Brands';
+
+.fonta { font-family: $fonta; }
+
+.fonta-social{
+  font-family: $fonta-social;
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+}
+
+.entypo {
+  font-family: "fontello";
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+}
+
+/*shapes for infographs*/
+.entypo.shape-hexagon:before { content: '\e804'; }
+.entypo.shape-octagon:before { content: '\e806'; }
+.entypo.shape-bubble:before { content: '\e91e'; }
+.entypo.shape-badge-ribbon:before { content: '\e91f'; }
+.entypo.shape-burst-8:before { content: '\e920'; }
+.entypo.shape-burst-12:before { content: '\e921'; }
+.entypo.shape-circle:before { content: '\e922'; }
+.entypo.shape-diamond:before { content: '\e923'; }
+.entypo.shape-heart:before { content: '\e924'; }

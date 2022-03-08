@@ -1,0 +1,35 @@
+<div class="alert-bar {{ component1.level }}">
+  <div class="content-container">
+    <div class="caption">
+      <button id="alert-bar-close" class="close" aria-label="close" tabindex="0">X</button>
+      <span class="fonta fa-exclamation-triangle"></span>
+      {% if component1.heading %}
+        <h2>{{ component1.heading }} -&nbsp;</h2>
+      {% endif %}
+      {% if component1.message %}
+        <p class="alert-message">{{ component1.message }}</p>
+      {% endif %}
+      {% if component1.link_url %}&nbsp;<a class="alert-more-link" href="{{ component1.link_url }}">{% endif %}
+      {% if component1.link_text %}{{ component1.link_text }}{% endif %}
+      {% if component1.link_url %}</a>{% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="alert-bar {{ component2.level }}">
+  <div class="content-container">
+    <div class="caption">
+      <button id="alert-bar-close" class="close" aria-label="close" tabindex="0">X</button>
+      <span class="fonta fa-exclamation-triangle"></span>
+      {% if component2.heading %}
+        <h2>{{ component2.heading }} -&nbsp;</h2>
+      {% endif %}
+      {% if component2.message %}
+        <p class="alert-message">{{ component2.message }}</p>
+      {% endif %}
+      {% if component2.link_url %}&nbsp;<a class="alert-more-link" href="{{ component2.link_url }}">{% endif %}
+      {% if component2.link_text %}{{ component2.link_text }}{% endif %}
+      {% if component2.link_url %}</a>{% endif %}
+    </div>
+  </div>
+</div>

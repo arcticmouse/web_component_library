@@ -1,0 +1,33 @@
+component.quote {
+   background-color: $founders_rock;
+   @include rem-fallback(padding, 20px);
+   @include rem-fallback(min-height, 150px);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+
+   .quote-text {
+        font-family: $freight-serif;
+        @include rem-fallback(font-size, 28px);
+        line-height: 1.2em;
+        @include rem-fallback(margin-bottom, 20px);
+        color: $ion;
+        font-weight: 600;
+   }
+
+   .quote-person {
+       color: $white;
+       font-family: $freight-sans;
+       @include rem-fallback(font-size, 24px);
+       @include rem-fallback(line-height, 22px);
+
+       &:before {
+            content: '\2014 \00A0';
+       }
+   }
+}
+
+main {
+     component.quote { text-align: left; }
+}

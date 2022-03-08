@@ -1,0 +1,8 @@
+Playlist for two or more embeded YouTube videos.
+
+Plays one video after another, and stops at the last video (does not loop back to the first video).
+Be aware of the length of right-hand "list" - more than 5 videos may require extra design.
+
+Additional requirements:
+JQuery 
+YouTube API script https://www.youtube.com/iframe_api

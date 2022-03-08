@@ -1,0 +1,59 @@
+component.slideshow{
+    display: flex;
+    flex-direction: column;
+
+    .slide {
+        display: none;
+
+        &.active { display: block; }
+
+        .caption {
+            @include caption-mixin;
+        }
+    }
+
+    .controls {
+        display: grid;
+        grid-template-columns: 8% 80% 8%;
+        grid-column-gap: 1%;
+
+        margin-bottom: 1rem;
+
+        .dots {
+            text-align: center;
+
+            span {
+                color: $pale-gray;
+
+                &.active { color: $menu-gray; }
+            }
+        }
+
+        .arrow {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 1rem;
+
+            span {
+                display: grid;
+                align-content: center;
+                justify-content: center;
+
+                font-weight: 800;
+                color: $white;
+                background: $menu-gray;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 1rem;
+            }
+
+            &.left {
+                span { justify-self: end; }
+            }
+
+            &.right {
+                span { justify-self: start; }
+            }            
+        }
+    }
+}

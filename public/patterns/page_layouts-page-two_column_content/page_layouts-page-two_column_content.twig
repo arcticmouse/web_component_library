@@ -1,0 +1,46 @@
+{% extends "includes/page_two_column-base.twig" %}
+
+  {% block contentleft %}
+    <div class="left">
+      {{ content }}
+      <component class="promo soybean">
+        <div>
+            <h3>Optional Component Title</h3>
+            <p>Optional component below thumblist can be: promo, photo, quote, video, bullet list, infographic</p>
+        </div>
+</component> 
+    </div>
+  {% endblock %}
+
+  {% block contentright %}
+    <div class="right">
+      {% include 'components/promos/component-video.twig' with {component:component_video} %}
+      <component class="promo medalist">
+        <div>
+            <h3>Optional Component Title</h3>
+            <p>Optional component below thumblist can be: promo, photo, quote, video, bullet list, infographic, widget, text box</p>
+        </div>
+      </component>
+      <component class="promo wellman_tile">
+        <div>
+            <h3>Optional Component Title</h3>
+            <p>Optional component below thumblist can be: promo, photo, quote, video, bullet list, infographic, widget, text box</p>
+        </div>
+      </component>
+      <component class="promo lap_lane">
+        <div>
+            <h3>Optional Component Title</h3>
+            <p>Optional component below thumblist can be: promo, photo, quote, video, bullet list, infographic, widget, text box</p>
+        </div>
+      </component>
+    </div>
+  {% endblock %}
+
+  {% block fullwidth %}
+    <component class="promo rose_garden">
+      <div>
+          <h3>Optional Full Width Component Title</h3>
+          <p>Optional component across bottom, above footer, can be: Promo, Quote, Video Playlist, Photo Grid</p>
+      </div>
+    </component>
+  {% endblock %}

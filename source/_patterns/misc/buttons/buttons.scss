@@ -1,0 +1,27 @@
+.button {
+    text-align: center;
+    background: $berkeley_blue;
+    border-radius: 6px;
+    @include rem-fallback(height, 45px);
+    @include rem-fallback(margin-bottom, 8px);
+    @include rem-fallback(padding, 5px);
+    color: $white;
+    font: $freight-sans;
+    font-weight: 400;
+    @include rem-fallback(font-size, 18px);
+    @include rem-fallback(line-height, 23px);
+    display: grid;
+    align-content: center;
+
+    &:hover { background: $black; }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover { 
+            color: $white; 
+            text-decoration: none;
+        }
+    }
+}

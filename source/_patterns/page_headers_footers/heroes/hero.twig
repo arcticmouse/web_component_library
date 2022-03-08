@@ -1,0 +1,17 @@
+<header class="Hero">
+<div class="hero homepage {{ img_align }}" style="background-image: url('{{ header_image }}');">
+  {% if link %}<a href="{{ link }}">{% endif %}
+  <div class="content-container">
+    <div class="caption">
+      <h2 class="{{ band_template_color }}">{{ caption_head }}</h2>
+      {% if caption_text %}
+        <p><span class="{{ band_template_color }}">{{ caption_text }}</span></p>
+      {% endif %}
+    </div>
+  </div>
+  {% if img_credit %}
+    <span class="credit">{{ img_credit }}</span>
+  {% endif %}
+  {% if link %}</a>{% endif %}
+</div>
+</header>

@@ -1,0 +1,75 @@
+{
+    "bodyClass": "page-template-page-masonry",
+    "lead_text": "Optional Lead Text",
+    "add_lead_text": "Optional Additional Lead Text", 
+    "components": {
+        "promo4":{
+            "type": "Promo",
+            "color": "lap_lane",
+            "traditions_promo_img_src": "../../images/LudwigFountain.jpg", 
+            "traditions_promo_img_alt": "Black dog in fountain",
+            "traditions_promo_heading": "Ludwig’s Fountain",
+            "traditions_promo_text": "Soon after the Student Union complex opened in 1960, the nearby fountain became the favorite spot of a German short-haired pointer named Ludwig. Ludwig spent every day in the fountain, and in 1961 it was named in his honor."
+        },
+        "info1":{
+            "type": "Infographic",
+            "infographic_type": "Icon",
+            "infographic_shape": "circle",
+            "infographic_background_color": "california_gold",
+            "infographic_amount": "71%",
+            "infographic_caption": "Undergraduate classes with fewer than 30 students"
+        },                
+        "promo1":{
+            "type": "Promo",
+            "color": "soybean",
+            "traditions_promo_img_src": "../../images/BlueGold.jpg", 
+            "traditions_promo_img_alt": "Rally member flying a Cal flag",
+            "traditions_promo_heading": "Blue and Gold",
+            "traditions_promo_text": "The campus colors of blue and gold were chosen in 1873 – blue for the California sky and ocean and for the Yale graduates who helped establish the university, gold for the “Golden State.” The women of the classes suggested using both colors."
+        },
+        "video1":{
+            "type": "Video",
+            "modal_class": "videoComponentModal",
+            "video_image": "../../images/sathergate.jpg",
+            "video_credit": "UC Berkeley",
+            "video_caption": "Welcome New Bears!",
+            "video_id": "7-DhdMJYvCU",
+            "site_url": "https://berkeley.edu",
+            "video_url": "https://www.youtube.com/watch?v=7-DhdMJYvCU&ab_channel=UCBerkeley"
+        },
+        "promo2":{
+            "type": "Promo",
+            "color": "lap_lane",
+            "traditions_promo_img_src": "../../images/FoundersRock2.jpg", 
+            "traditions_promo_img_alt": "Black and white photo of a rock with a plaque",
+            "traditions_promo_heading": "Founders Rock",
+            "traditions_promo_text": "Trustees of the College of California stood on the north side of the campus near the corner of Hearst Avenue and Gayley Road on April 16, 1860, and dedicated the property as the future campus. A memorial tablet was placed on the stone in 1896."
+        },        
+        "promo3":{
+            "type": "Promo",
+            "color": "wellman_tile",
+            "traditions_promo_img_src": "../../images/CardStunt.jpg", 
+            "traditions_promo_img_alt": "Historic photo of fans holding cards from the bleachers",
+            "traditions_promo_heading": "Card stunts",
+            "traditions_promo_text": "At the Big Game of 1914, colored cards supplied to Cal fans were held up in the rooting section according to direction to make a pattern. Over time card stunts became more elaborate, including the “Cal script,” in which a huge “Cal” appeared to be written."
+        },
+        "info2":{
+            "type": "Infographic",
+            "infographic_type": "Icon",
+            "infographic_shape": "circle",
+            "infographic_background_color": "berkeley_blue",
+            "infographic_amount": "17.8 to 1",
+            "infographic_caption": "Student-to-faculty ratio"
+        },         
+        "video2":{
+            "type": "Video",
+            "modal_class": "videoComponentModal",
+            "video_image": "../../images/TreeChop.jpg",
+            "video_credit": "UC Berkeley",
+            "video_caption": "Big Game tree chopping rally",
+            "video_id": "m9SZzOcJcJU",
+            "site_url": "https://berkeley.edu",
+            "video_url": "https://www.youtube.com/watch?v=m9SZzOcJcJU"
+        }        
+    }    
+}

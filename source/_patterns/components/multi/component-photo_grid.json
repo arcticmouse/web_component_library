@@ -1,0 +1,62 @@
+{
+    "component":{
+       "photo_grid":{
+          "photo":{
+             "title":"Cal band",
+             "caption":"Cal band performing on Sproul Hall steps.",
+             "url":"../../images/photo_grid/Band.jpg",
+             "credit":"Photo by Elena Zhukova.",
+             "alt_text":"Cal band players with buttons on vest"
+          },
+          "photo1":{
+             "title":"Student athlete",
+             "caption":"A student swims at the Hearst Gymnasium pool.",
+             "url":"../../images/photo_grid/Swimmer.jpg",
+             "credit":"Photo by Elena Zhukova.",
+             "alt_text":"Male students sitting next to a pool"
+          },
+          "photo2":{
+             "title":"Choral group",
+             "caption":"The Men's Octet sings at Sather Gate.",
+             "url":"../../images/photo_grid/Octet.jpg",
+             "credit":"Photo by Elena Zhukova.",
+             "alt_text":"Male octet group singing"
+          },
+          "photo3":{
+             "title":"Actors",
+             "caption":"Student actors.",
+             "url":"../../images/photo_grid/Actors.jpg",
+             "credit":"Photo by Elena Zhukova.",
+             "alt_text":"Drama"
+          },
+          "photo4":{
+            "title":"Dance",
+            "caption":"Students tango.",
+            "url":"../../images/photo_grid/DancersSquare2.jpg",
+            "credit":"Photo by Elena Zhukova.",
+            "alt_text":"Two people dancing in a hallway"
+         },
+         "photo5":{
+            "title":"Student organization tables",
+            "caption":"A student staffs a table on Sproul Plaza.",
+            "url":"../../images/photo_grid/sq-artstudent2.jpg",
+            "credit":"Photo by Elena Zhukova.",
+            "alt_text":"Female with red hat and stickers on her hands"
+         },
+         "photo6":{
+            "title":"A game of pool",
+            "caption":"Billiards game. ",
+            "url":"../../images/photo_grid/PoolPlayers.jpg",
+            "credit":"Photo by Elena Zhukova.",
+            "alt_text":"Two girls playing pool"
+         },
+         "photo7":{
+            "title":"Art",
+            "caption":"Student artist.",
+            "url":"../../images/photo_grid/StudentArtist.jpg",
+            "credit":"Photo by Elena Zhukova.",
+            "alt_text":"Females wearing a mask and holding up an artwork in front of her face"
+         }                                                  
+       }
+    }
+}

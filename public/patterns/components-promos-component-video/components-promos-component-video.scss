@@ -1,0 +1,66 @@
+component.video {
+    display: flex;
+    flex-direction: column;
+
+    img { 
+        border-bottom: none; 
+        display: flex;
+        object-fit: fill;
+    }
+
+    a { 
+        display: flex;
+        flex-direction: column;
+        text-decoration: none; 
+        &:hover { 
+            text-decoration: underline; 
+            text-decoration-color: $black;
+        }
+    }
+
+    div.caption {
+        text-align: left;
+        background-color: $caption_gray;
+        padding: 0.5rem 1rem; 
+
+        h3 {
+            font-family: $freight-serif;
+            margin: 0;
+            @include rem-fallback(font-size, 20px);
+            @include rem-fallback(line-height, 20px);
+            font-weight: 400;
+            color: $berkeley-blue;
+        }
+    }
+          
+    div.overlay {
+        position: relative;
+
+        &:before {
+            color: $white;
+            background-color: $overlay_grey_background;
+            position: absolute;
+            text-align: center;
+            padding: .5rem;
+            @include rem-fallback(bottom, 1px);
+            @include rem-fallback(font-size, 22px);
+            @include rem-fallback(line-height, 16px); 
+            @include rem-fallback(width, 33px); 
+            @include rem-fallback(margin, 10px, 5px); 
+        }
+
+
+        p {
+            @include component-p;
+            @include rem-fallback(margin, 0, 5px, 0, 0);
+            line-height: 1rem;
+            float: right;
+            margin-top: -1.5rem;
+            background-color: $grey_background;
+            z-index: 50;
+            position: relative;
+            color: $white;
+            font-style: italic;
+        }
+    }
+}

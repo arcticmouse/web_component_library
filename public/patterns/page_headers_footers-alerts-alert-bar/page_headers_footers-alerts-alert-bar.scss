@@ -1,0 +1,38 @@
+.alert-bar {
+    display: grid;
+    @include rem-fallback(padding, 10px, 0px, 5px); 
+
+    &.Medium { background-color: $wellman_tile; }
+    &.Low { background-color: $california_gold; }
+
+    .content-container {
+        .caption {
+            span.entypo, h2, p.alert-message, a.alert-more-link {
+                color: $white;
+                display: inline;
+                font-weight: 500;
+
+                @include rem-fallback(font-size, 18px);
+                @include rem-fallback(line-height, 20px);
+            }
+            h2, p.alert-message, a.alert-more-link { font-family: $freight-sans; }
+
+            p.alert-message {
+                a { color: $white; }
+            }
+
+            button {
+                float: right;
+                border: none;
+                background-color: transparent;
+                font-size: 100%;
+                color: $menu_gray;
+                text-shadow: 0 1px 0 $text_gray;
+                font-weight: 700;
+                opacity: .3;
+
+                &:hover { cursor: pointer; }
+            }
+        }
+    }
+}

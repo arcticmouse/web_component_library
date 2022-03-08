@@ -1,0 +1,57 @@
+component.promo {
+    @include rem-fallback(min-height, 340px);
+    text-align: center;
+    overflow: hidden;    
+    background-image: url('../../images/tessellation-bg-04.png'), url('../../images/tessellation-bg-08.png');
+    background-position: right bottom, left bottom;
+    background-repeat: no-repeat, no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a { 
+        text-decoration: none; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }    
+
+    img { flex: 1; }
+    
+    &.circle {
+        img { 
+            border-radius: 100% ;
+            @include rem-fallback(max-width, 170px);
+            align-self: center;
+        }
+    }
+
+    &.square { 
+        background-image: none;
+
+    }
+
+    div {
+        flex: 1;
+
+        h3 { 
+            color: $white; 
+            @include rem-fallback(font-size, 24px);
+            font-family: $freight-serif;
+            font-weight: 600;
+            
+        }
+    
+        p { 
+            @include component-p;
+        }
+    }
+}
+
+.right {
+    component.promo {
+        min-height: auto;
+        div { @include rem-fallback(padding, 20px, 40px); }
+    }
+}

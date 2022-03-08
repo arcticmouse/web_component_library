@@ -1,0 +1,4 @@
+Format for RSS feed lists.
+
+-Display the title of the article
+-Footer link can be removed if header has a link to RSS origin

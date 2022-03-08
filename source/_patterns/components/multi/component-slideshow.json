@@ -1,0 +1,43 @@
+{
+    "component": {
+        "title": "Campus buildings 2010-present",
+        "slide":{
+            "slide1": {
+                "img": "../../images/slideshow/LKS_468.jpg",
+                "alt": "Building with beige and glass panels",
+                "credit": "Photo © UC Regents",
+                "caption": "Li Ka Shing Center for Biomedical and Health Sciences, completed in 2011. Global entrepreneur and philanthropist, Li Ka-shing, donates funds to propel support for building of the 200,000 square foot facility."
+            },
+            "slide2": {
+                "img": "../../images/slideshow/Stadium468.jpg",
+                "alt": "Illuminated arched area of stadium at night",
+                "credit": "Photo © UC Regents",
+                "caption": "A complete renovation and seismic retrofitting of California Memorial Stadium is completed in 2012."
+            },
+            "slide3": {
+                "img": "../../images/slideshow/CampbellHall468.jpg",
+                "alt": "View of a large building with street below",
+                "credit": "Photo © UC Regents",
+                "caption": "A rebuilt Campbell Hall is dedicated in February 2015. The focus of the renovation was bridging the gap between astronomers and physicists, and included an open-air bridge to LeConte Hall and the physics department."
+            },
+            "slide4": {
+                "img": "../../images/slideshow/Jacobs468.jpg",
+                "alt": "Metal sided building with large glass windows",
+                "credit": "Photo © UC Regents",
+                "caption": "Jacobs Hall opens its doors in August 2015. The building is the headquarters of the Jacobs Institute for Design Innovation, launched to immerse students in hands-on, human-centered design."
+            },
+            "slide5": {
+                "img": "../../images/slideshow/LowerSproul468.jpg",
+                "alt": "Building with street and pedestrian",
+                "credit": "Photo © UC Regents",
+                "caption": "In 2010 graduate and undergraduate student leadership negotiate an agreement to rebuild Lower Sproul Plaza. The ASUC agrees to share revenues from its retail businesses in Lower Sproul with the graduate students. That pact, along with a ballot measure to increase student fees, makes the renovation possible."
+            },
+            "slide6": {
+                "img": "../../images/slideshow/BAM_468.jpg",
+                "alt": "Rendering of building with cantilevered section over sidewalk with pedestrians.",
+                "credit": "Photo © UC Regents",
+                "caption": "The Berkeley Art Museum and Pacific Film Archive will move to a new location on the west side of campus in 2016."
+            }                                                               
+        }
+    }
+}

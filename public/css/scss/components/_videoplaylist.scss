@@ -1,0 +1,51 @@
+component.video-playlist {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+
+    @include max-small-width {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .now-playing {
+        padding: .5rem;
+
+        .iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
+
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .playlist {
+        padding: .5rem;
+
+        .video {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-column-gap: .5rem;
+            padding: .5rem;
+            margin-bottom: .5rem;
+            align-content: center;
+            background-color: $web_gray;
+
+            &.active { background-color: $pacific; }
+
+            .video-caption {
+                font-family: $freight-serif;
+                color: $white;
+                @include rem-fallback(font-size, 16px);
+            }
+        }
+    }
+
+}

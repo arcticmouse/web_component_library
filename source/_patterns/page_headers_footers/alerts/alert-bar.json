@@ -1,0 +1,16 @@
+{
+    "component1": {
+        "level": "Low",
+        "heading": "A low level alert",
+        "message": "Oski has lost his hat.",
+        "link_url": "https://news.berkeley.edu",
+        "link_text": "For more information click here."
+    },
+    "component2": {
+        "level": "Medium",
+        "heading": "A medium level alert",
+        "message": "Giant snowballs rolling down Bancroft.",
+        "link_url": "https://news.berkeley.edu",
+        "link_text": "For more information click here."
+    }
+}

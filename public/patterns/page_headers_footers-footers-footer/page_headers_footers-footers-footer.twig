@@ -1,0 +1,28 @@
+<footer>
+	<div class="content-container">
+
+		<div class="component footer-logo">
+			<img src="{{ footer_logo }}" alt="University of California, Berkeley"/>
+            <ul class="footer-social">
+                <li><a href="http://www.facebook.com/UCBerkeley" target="_blank" title="Facebook" rel="noopener"><span class="fab fa-facebook-f fonta-social"></span><span class="screen-reader">Facebook</span></a></li>
+                <li><a href="https://twitter.com/UCBerkeley" target="_blank" title="Twitter" rel="noopener"><span class="fab fa-twitter fonta-social"></span><span class="screen-reader">Twitter</span></a></li>
+                <li><a href="https://www.youtube.com/channel/UCZAXKyvvIV4uU4YvP5dmrmA" target="_blank" title="Youtube" rel="noopener"><span class="fab fa-youtube fonta-social"></span><span class="screen-reader">YouTube</span></a></li>
+                <li><a href="http://instagram.com/ucberkeleyofficial#" target="_blank" title="Instagram" rel="noopener"><span class="fab fa-instagram fonta-social"></span><span class="screen-reader">Instagram</span></a></li>
+                <li><a href="https://medium.com/@UCBerkeley" target="_blank" title="Medium" rel="noopener"><span class="fab fa-medium-m fonta-social"></span><span class="screen-reader">Medium</span></a></li>
+                </ul>
+		</div>
+
+		<div class="component footer-menu">
+      {% include 'includes/menu.twig' with {items: menuFooterPrimary, class: 'footer-primary-menu'} %}
+			<hr>
+			<div class="footer-secondary-menus">
+              {% include 'includes/menu.twig' with {items: menuFooterSecondaryLeft, class: 'footer-left-menu'} %}
+			  {% include 'includes/menu.twig' with {items: menuFooterSecondaryRight, class: 'footer-right-menu'} %}
+			</div>
+
+		</div>
+
+		<div class="component footer-copyright"><div class="textwidget"><p>{{ footerCopyrightText }}</p></div></div>
+		</div>
+	</div>
+</footer>

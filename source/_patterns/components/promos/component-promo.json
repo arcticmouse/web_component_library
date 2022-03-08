@@ -1,0 +1,11 @@
+{
+    "component":{
+        "background_color": "soybean",
+        "promo_link": "https://botanicalgarden.berkeley.edu/",
+        "title": "UC Botanical Garden",
+        "promo_image": {
+            "url": "../../images/BotGarden2.jpg"
+        },
+        "promo_message": "Botanical curriculum, tools and educational programs for K-12 teachers and the public."
+    }
+}

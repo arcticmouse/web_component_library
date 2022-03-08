@@ -1,0 +1,87 @@
+component.infographic {
+    background-color: $mobile-menu-background;
+    @include rem-fallback(padding, 20px);
+    
+    &.Icon {
+        a { text-decoration: none; }
+
+        &.grid-style, a.grid-style {
+            display: grid;
+            grid-template-rows: 200px minmax(0,1fr);
+            justify-items: center;
+            align-items: center;
+        }
+
+        .shape {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            background-color: $white;
+            font-family: $fontello;
+            @include rem-fallback(font-size, 48px);
+            line-height: 0rem;
+
+            &.berkeley_blue { color: $berkeley_blue; }
+            &.founders_rock { color: $founders_rock; }
+            &.california_gold { color: $california_gold; }
+            &.medalist { color: $medalist; }
+            &.wellman_tile { color: $wellman_tile; }
+            &.rose_garden { color: $rose_garden; }
+            &.golden_gate { color: $golden_gate; }
+            &.south_hall { color: $south_hall; }
+            &.bay_fog { color: $bay_fog; }
+            &.lawrence { color: $lawrence; }
+            &.lap_lane { color: $lap_lane; }
+            &.pacific { color: $pacific; }
+            &.sather_gate { color: $sather_gate; }
+            &.ion { color: $ion; }
+            &.soybean { color: $soybean; }
+            &.stone_pine { color: $stone_pine; }
+
+            &:before {
+                @include rem-fallback(font-size, 176px);
+            }
+
+            &.badge_ribbon:before { content: '\e91f'; }
+            &.bubble:before { content: '\e91e'; }
+            &.circle:before { content: '\e922'; }
+            &.diamond:before { content: '\e923'; }
+            &.heart:before { content: '\e924'; }
+            &.hexagon:before { content: '\e804'; }
+            &.eight_point_burst:before { content: '\e920'; }
+            &.twelve_point_burst:before { content: '\e921'; }            
+
+            .amount {
+                color: white;
+                display: grid;
+                align-self: center;
+                justify-self: center;
+                font-family: $freight-serif;
+                margin-top: -2rem;
+
+                &.small { @include rem-fallback(font-size, 32px); }
+            }
+
+            &.hexagon {
+                .amount { margin-top: -1rem; }
+            }
+
+            &.circle, &.diamond, &.eight_point_burst, &.twelve_point_burst {
+                .amount { margin-top: 0; }
+            }
+        }
+
+        .caption {
+            font-family: $freight-serif;
+            color: $menu_gray;
+            @include rem-fallback(font-size, 20px);
+            @include rem-fallback(line-height, 22px);
+            text-align: center;
+        }
+    }
+
+    a {
+        .caption { text-decoration: underline; }
+    }
+
+}

@@ -1,0 +1,58 @@
+form#navbar-search.navbar-form {
+    grid-row: 1;
+    grid-column: 82/100;
+    justify-self: end;
+
+      display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    @include rem-fallback(margin, 6px, 0, 5px, 15px);
+    @include rem-fallback(width, 200px);
+    @include rem-fallback(font-size, 14px);
+    font-family: 'Open Sans',sans-serif;
+    @include rem-fallback(line-height, 22px);
+
+    @include max-large-width { grid-column: 77/100; }
+    @include max-med-width { grid-column: 72/100; }
+    @include max-small-width {
+        grid-row: 1;
+        grid-column: 1/100;
+        width: 100%;
+    }
+
+    .form-group {
+        @include max-small-width { flex-grow: 1; }
+
+        input.form-control {
+            border-radius: 4px;
+            border: none;
+            background-color: $site_background;
+            box-shadow: inset 0 0px 1px rgba(0,0,0,0.2);
+            @include rem-fallback(height, 32px);
+            @include rem-fallback(width, 178px);
+            @include rem-fallback(font-size, 14px);
+            @include rem-fallback(padding-left, 15px);
+
+            @include max-small-width {
+                background-color: $white_gray;
+                width: 100%;
+                height: 2.75rem;
+                color: $text_gray;
+            }
+        }
+
+    }
+
+    button.btn-default {
+        display: inline;
+        @include rem-fallback(padding, 7px, 9px);
+        @include rem-fallback(margin-left, -5px);
+        border: none;
+        @include rem-fallback(height, 32px);
+        border-radius: 4px;
+        @include rem-fallback(font-size, 16px);
+
+        @include max-small-width { display: none; }
+    }
+
+}

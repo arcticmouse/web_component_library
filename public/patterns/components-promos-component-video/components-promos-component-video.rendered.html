@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title>A Page Header</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <link rel="stylesheet" href="../../css/style.css?1629144452824" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1629144452824" media="all" />
+    <link rel="stylesheet" href="https://use.typekit.net/scr0aog.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css">
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+  
+  </head>
+  <body class=""><component class="video">
+    <a href="#" class="modal videoComponentModal">
+    <div class="overlay fonta fas fa-play">
+        <img src="../../images/sathergate.jpg">
+        <p><cite>UC Berkeley</cite></p>    </div>
+    <div class="caption">
+        <h3>Welcome New Bears!</h3>
+    </div>
+</a>
+<div role="dialog" 
+        id="videoComponentModal" 
+        aria-modal="true" 
+        aria-describedby="videoComponentModal" 
+        aria-labelledby="videoComponentModal" 
+        class="modal-window hidden"
+        tabindex="-1">
+    <div class="modal-content" role="document">
+        <div class="modal-head">
+            <div class="title">
+                                    <h4 tabindex="0">Welcome New Bears!</h4>
+                 
+            </div>  
+            <button id="videoComponentModal_close" class="videoComponentModal close" aria-label="close" tabindex="0">X</button>             
+             
+        </div>
+        <div class="modal-body">
+            <iframe 
+                id="7-DhdMJYvCU"
+                style="flex:1;"
+                title="YouTube video player" 
+                allowfullscreen 
+                src="https://www.youtube.com/embed/7-DhdMJYvCU?autoplay=0&amp;modestbranding=1&amp;enablejsapi=1" 
+                name="7-DhdMJYvCU"
+                tabindex="0">
+            </iframe>
+            <div class="email" aria-hidden="true">
+                <p>To share this video via email, copy and paste the message and URL below into your favorite email client and send.<p>
+                <pre>
+                    Check out this video I saw on https://berkeley.edu
+
+                    Welcome New Bears!
+
+                    https://www.youtube.com/watch?v=7-DhdMJYvCU&ab_channel=UCBerkeley
+                </pre>
+            </div>
+        </div>
+        <div class="modal-footer" tabindex="0" name="Welcome New Bears!" data-url="https://www.youtube.com/watch?v=7-DhdMJYvCU&ab_channel=UCBerkeley">
+            <button class="sharetwitter"><span class="fab fa-twitter fonta-social"></span><span class="screen-reader">Twitter</span></button>
+            <button class="sharefacebook"><span class="fab fa-facebook-f fonta-social"></span><span class="screen-reader">Facebook</span></button>
+            <button class="shareemail"><span class="fal fa-envelope fonta-social"></span><span class="screen-reader">Email</span></button>
+            <button class="videoComponentModal close-video-modal close"></button>
+        </div>
+    </div>
+</div>
+</component><!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"page_layouts-page-two_column_content","lineagePath":"../../patterns/page_layouts-page-two_column_content/page_layouts-page-two_column_content.rendered.html"},{"lineagePattern":"page_layouts-page-two_column_thumblist","lineagePath":"../../patterns/page_layouts-page-two_column_thumblist/page_layouts-page-two_column_thumblist.rendered.html"}],"lineageR":[{"lineagePattern":"page_layouts-page-two_column_content","lineagePath":"../../patterns/page_layouts-page-two_column_content/page_layouts-page-two_column_content.rendered.html"},{"lineagePattern":"page_layouts-page-two_column_thumblist","lineagePath":"../../patterns/page_layouts-page-two_column_thumblist/page_layouts-page-two_column_thumblist.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"components","patternSubgroup":"promos"},"patternExtension":"twig","patternName":"Component Video","patternPartial":"components-component-video","patternState":"","patternEngineName":"twig-php","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"page_layouts-page-two_column_content","lineagePath":"../../patterns/page_layouts-page-two_column_content/page_layouts-page-two_column_content.rendered.html"},{"lineagePattern":"page_layouts-page-two_column_thumblist","lineagePath":"../../patterns/page_layouts-page-two_column_thumblist/page_layouts-page-two_column_thumblist.rendered.html"}],"lineageR":[{"lineagePattern":"page_layouts-page-two_column_content","lineagePath":"../../patterns/page_layouts-page-two_column_content/page_layouts-page-two_column_content.rendered.html"},{"lineagePattern":"page_layouts-page-two_column_thumblist","lineagePath":"../../patterns/page_layouts-page-two_column_thumblist/page_layouts-page-two_column_thumblist.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"components","patternSubgroup":"promos"},"patternExtension":"twig","patternName":"Component Video","patternPartial":"components-component-video","patternState":"","patternEngineName":"twig-php","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1629144452824">
+  (function() {
+    if (self != top) {
+      var cb = '1629144452824';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1629144452824" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+  <script type="text/javascript" src="../../js/jquery-2.0.0b2.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+  <script type="text/javascript" src="../../js/index.js"></script>
+  <script type="text/javascript" src="../../js/photo-grid.js"></script>
+  <script type="text/javascript" src="../../js/video-playlist.js"></script>
+  <script type="text/javascript" src="../../js/macy.min.js"></script>
+  <script type="text/javascript" src="../../js/masonry-grid.js"></script>
+  </body>
+</html>

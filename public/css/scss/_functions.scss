@@ -1,0 +1,39 @@
+//base font of site, only in site.scss
+$base-font-size: 16;
+
+/****************************************/
+/* px to rem
+/****************************************/
+@function stripUnit($num) {
+    @return $num/($num * 0 + 1);
+}
+
+@function pxToRem($size) {
+    @return #{stripUnit($size) / $base-font-size};
+}
+  
+@mixin rem-fallback($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+
+    @for $i from 1 through $max {
+        $value: stripUnit(nth($values, $i));
+        $pxValues: #{$pxValues + $value}px;
+
+        @if $property != line-height {
+            $remValues: #{$remValues + pxToRem($value)}rem;
+        } @else if $property == line-height {
+            $remValues: #{$remValues + pxToRem($value)};
+        }
+        
+
+        @if $i < $max {
+            $pxValues: #{$pxValues + " "};
+            $remValues: #{$remValues + " "};
+        }
+    }
+
+    #{$property}: $pxValues; 
+    #{$property}: $remValues; 
+}

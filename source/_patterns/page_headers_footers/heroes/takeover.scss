@@ -1,0 +1,36 @@
+&.takeover {
+    .content-container {
+        grid-column: 1/100;
+
+        .navigation {
+            #main-nav { 
+                z-index: 98; 
+                #mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link { color: $white; }
+                @include min-med-width {
+                    #mega-menu-wrap-main.mega-menu-wrap, #mega-menu-wrap-main {
+                        background: none;
+                        ul#mega-menu-main {
+                            li.mega-menu-item {
+                                a.mega-menu-link {
+                                    color: $white;
+                                    &:hover { border-color: $white; }
+                                }
+                            }
+                        }
+                    }
+                }
+                @include max-small-width {
+                    #mega-menu-wrap-main.mega-menu-wrap, #mega-menu-wrap-main {
+                        background: none;
+                        ul#mega-menu-main {
+                            li.mega-menu-item {
+                                a.mega-menu-link {
+                                    color: $berkeley_blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

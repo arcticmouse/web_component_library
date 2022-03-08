@@ -1,0 +1,9 @@
+{
+    "component":{
+        "infographic_type": "Icon",
+        "infographic_shape": "badge_ribbon",
+        "infographic_color": "berkeley_blue",
+        "infographic_amount": "234",
+        "infographic_caption": "Hello"
+    }
+}

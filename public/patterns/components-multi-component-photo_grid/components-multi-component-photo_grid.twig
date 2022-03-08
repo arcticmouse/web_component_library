@@ -1,0 +1,11 @@
+<component class="photo_grid content-container">
+    {% for photo in component.photo_grid %}
+        <div class="grid-img" 
+             data-title="{{ photo.title }}" 
+             data-caption="{{ photo.caption }}" 
+             data-link="{{ photo.url }}"
+             data-credit="{{ photo.credit }}">
+                <img src="{{ photo.url }}" alt="{{ photo.alt_text }}"/>
+        </div>
+    {% endfor %}
+</component>        

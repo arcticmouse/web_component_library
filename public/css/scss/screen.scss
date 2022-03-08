@@ -1,0 +1,64 @@
+/********************/
+//screen size variables
+/********************/
+$small-width: 48rem; //#{pxToRem(768px)}rem; //48
+$med-width: 62rem; //#{pxToRem(992px)}rem; //62
+$large-width: 75rem; //#{pxToRem(1200px)}rem; //75
+$over-large: 87.5rem; //#{pxToRem(1400px)}rem; //87.5
+
+/********************/
+//media queries
+/********************/
+@mixin min-small-width {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin max-small-width {
+  @media (max-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin min-med-width {
+  @media (min-width: #{$med-width}) {
+    @content;
+  }
+}
+
+@mixin max-med-width {
+  @media (max-width: #{$med-width}) {
+    @content;
+  }
+}
+
+@mixin min-large-width {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin max-large-width {
+  @media (max-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin min-over-large-width {
+  @media (min-width: #{$over-large}) {
+    @content;
+  }
+}
+
+@mixin small-to-med-width {
+  @media (min-width: #{$small-width}) and (max-width: #{$med-width}) {
+    @content;
+  }
+}
+
+@mixin med-to-large-width {
+  @media (min-width: #{$med-width}) and (max-width: #{$large-width}) {
+    @content;
+  }
+}

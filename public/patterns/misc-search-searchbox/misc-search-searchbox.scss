@@ -1,0 +1,51 @@
+.search {
+    form {
+        @include rem-fallback(padding, 25px);
+        border: 1px solid $menu_border_gray;
+        border-radius: 3px;
+        margin-top: 2rem;
+
+        label {
+            width: 100%;
+            float: left;
+            @include rem-fallback(margin-bottom, 10px);
+            color: $berkeley_blue;
+            text-transform: uppercase;
+            font-weight: 700;
+            @include rem-fallback(letter-spacing, 1px);
+            @include rem-fallback(font-size, 14px);
+            @include rem-fallback(line-height, 13.2px);
+            font-family: $freight-sans;
+        }
+
+        input.search-field {
+            float: left;
+            width: 80%;
+            @include rem-fallback(height, 34px);
+            @include rem-fallback(font-size, 14px);
+            color: $text_gray;
+            border: 1px solid $pale_gray;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+            @include rem-fallback(padding, 6px, 12px);
+        }
+
+        button.btn.btn-search {
+            width: 10%;
+            margin-left: 2%;
+            color: $white;
+            background-color: $berkeley_blue;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            @include rem-fallback(padding, 6px, 12px);
+            font-size: 1rem;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
+}

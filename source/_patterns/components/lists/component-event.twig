@@ -1,0 +1,33 @@
+<component class="block event">
+    {% if component.heading %}
+        <div class="event-heading">
+        {% if component.heading_link %}<a href="{{ component.heading_link }}">{% endif %}
+        {{ component.heading }}
+        {% if component.heading_link %}</a>{% endif %}
+        </div>
+    {% endif %}
+
+    {% for event in component.events %}
+        <div class="event-event">
+            <div class="event-date">
+                <div class="event-month">{{ event.month }}</div>
+                <div class="event-day">{{ event.day }}</div>
+            </div>
+            <div class="event-title">
+                <a href="{{ event.link }}">
+                    {{ event.summary }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+    {% if component.more_text %}
+        <div class="event-more">
+        {% if component.more_url %}
+            <a href="{{ componend.more_url }}">
+            {{ component.more_text }}
+            </a>
+        {% endif %}
+        </div>
+    {% endif %}
+</component>    

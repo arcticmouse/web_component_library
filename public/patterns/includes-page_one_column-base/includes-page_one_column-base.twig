@@ -1,0 +1,36 @@
+<body class="{{body_class}}" data-template="page_one_column-base.twig">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	{% include 'includes/header.twig' %}
+
+	<main id="content" class="content-container">
+		
+		{% if lead_text %}
+			<div>
+				<p class="lead-text">
+					{% block leadtext %}
+						{{ lead_text }}
+					{% endblock %}
+				</p>
+				<p>
+					{% block addleadtext %}
+						{{ add_lead_text }}
+					{% endblock %}
+				</p>					
+			</div>
+		{% endif %}
+
+		<div class="main-grid">
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
+		</div>
+
+	</main>
+
+	{% block fullwidth %}
+
+	{% endblock %}
+
+	{% include 'page_headers_footers/footers/footer.twig' %}
+</body>

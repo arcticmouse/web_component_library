@@ -1,0 +1,23 @@
+<component class="block rss">
+    <div class="rss-title">
+        {% if component.rss_link %}<a href="{{ component.rss_link }}">{% endif %}
+        {{ component.rss_title }}
+        {% if component.rss_link %}</a>{% endif %}
+        </div>
+        
+        <ul class="rss-item">
+        {% for item in component.items %}
+            <li class="fonta fa-chevron-right">
+                {% if item.link %}<a href="{{ item.link }}">{% endif %}
+                {{ item.title }}
+                {% if item.link %}</a>{% endif %}
+            </li>
+        {% endfor %}
+        </ul> 
+        
+        <div class="rss-more">
+        {% if component.rss_link %}<a href="{{ component.rss_link }}">{% endif %}
+        More news
+        {% if component.rss_link %}</a>{% endif %}
+        </div>
+</component>    

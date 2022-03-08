@@ -1,0 +1,6 @@
+Display a highlighted text/information block
+
+-Images need a square aspect ratio to display fully
+-Images can have square or circle crop
+-Images can have "branded" tesselation color bar beneath
+-Link is optional

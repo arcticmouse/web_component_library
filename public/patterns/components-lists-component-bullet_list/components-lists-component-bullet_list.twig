@@ -1,0 +1,88 @@
+<component class="block bullet_list">
+    {% if component.component_no_bullet.bullet_title %}
+        {% if component.h2_header %}<h2>{% else %}<h3>{% endif %}{{ component.component_no_bullet.bullet_title }}{% if component.h2_header %}</h2>{% else %}</h3>{% endif %}
+    {% endif %}
+    
+    <ul {% if component.component_no_bullet.show_bullets %}class="{{component.bullet_type}}"{% endif %}>
+    {% for item in component.bullet_items %}
+        <li {% if component.bullet_type == 'bullets' %}class="fonta fa-chevron-right"{% endif %}>
+            {% if item.item_links.item_url or item.item_links.item_telephone_number or item.item_links.item_email %}
+                <a href="{% if item.item_links.item_telephone_number %}tel:{{ item.item_links.item_telephone_number }}
+                        {% elseif item.item_links.item_email %}mailto:{{item.item_links.item_email}}
+                        {% else %}{{ item.item_links.item_url }}{% endif %}">
+            {% endif %}
+                {% if item.item_links.item_url %}{{ item.item_text }}{% else %}{{ item.item_text }}{% endif %}
+            {% if item.item_links.item_url or item.item_links.item_telephone_number or item.item_links.item_email %}
+                </a>
+            {% endif %}
+            {% if item.item_text_area %}{{ item.item_text_area }}{% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    
+    {% if component.bullet_more_link %}
+        <div class="more-link">
+            <a href="{{ component.bullet_more_link }}">More</a>
+        </div>
+    {% endif %}
+</component>      
+
+
+<component class="block bullet_list">
+    {% if component.component_arrow_bullets.bullet_title %}
+        {% if component.h2_header %}<h2>{% else %}<h3>{% endif %}{{ component.component_arrow_bullets.bullet_title }}{% if component.h2_header %}</h2>{% else %}</h3>{% endif %}
+    {% endif %}
+    
+    <ul {% if component.component_arrow_bullets.show_bullets %}class="{{component.component_arrow_bullets.bullet_type}}"{% endif %}>
+    {% for item in component.bullet_items %}
+        <li {% if component.component_arrow_bullets.bullet_type == 'bullets' %}class="fonta fa-chevron-right"{% endif %}>
+            {% if item.item_links.item_url or item.item_links.item_telephone_number or item.item_links.item_email %}
+                <a href="{% if item.item_links.item_telephone_number %}tel:{{ item.item_links.item_telephone_number }}
+                        {% elseif item.item_links.item_email %}mailto:{{item.item_links.item_email}}
+                        {% else %}{{ item.item_links.item_url }}{% endif %}">
+            {% endif %}
+                {% if item.item_links.item_url %}{{ item.item_text }}{% else %}{{ item.item_text }}{% endif %}
+            {% if item.item_links.item_url or item.item_links.item_telephone_number or item.item_links.item_email %}
+                </a>
+            {% endif %}
+            {% if item.item_text_area %}{{ item.item_text_area }}{% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    
+    {% if component.bullet_more_link %}
+        <div class="more-link">
+            <a href="{{ component.bullet_more_link }}">More</a>
+        </div>
+    {% endif %}
+</component> 
+
+
+<component class="block bullet_list">
+    {% if component.component_dot_bullets.bullet_title %}
+        {% if component.h2_header %}<h2>{% else %}<h3>{% endif %}{{ component.component_dot_bullets.bullet_title }}{% if component.h2_header %}</h2>{% else %}</h3>{% endif %}
+    {% endif %}
+    
+    <ul {% if component.component_dot_bullets.show_bullets %}class="{{component.component_dot_bullets.bullet_type}}"{% endif %}>
+    {% for item in component.bullet_items %}
+        <li {% if component.component_dot_bullets.bullet_type == 'bullets' %}class="fonta fa-chevron-right"{% endif %}>
+            {% if item.item_links.item_url or item.item_links.item_telephone_number or item.item_links.item_email %}
+                <a href="{% if item.item_links.item_telephone_number %}tel:{{ item.item_links.item_telephone_number }}
+                        {% elseif item.item_links.item_email %}mailto:{{item.item_links.item_email}}
+                        {% else %}{{ item.item_links.item_url }}{% endif %}">
+            {% endif %}
+                {% if item.item_links.item_url %}{{ item.item_text }}{% else %}{{ item.item_text }}{% endif %}
+            {% if item.item_links.item_url or item.item_links.item_telephone_number or item.item_links.item_email %}
+                </a>
+            {% endif %}
+            {% if item.item_text_area %}{{ item.item_text_area }}{% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    
+    {% if component.bullet_more_link %}
+        <div class="more-link">
+            <a href="{{ component.bullet_more_link }}">More</a>
+        </div>
+    {% endif %}
+</component> 

@@ -1,0 +1,98 @@
+component.thumblist {
+    .item {
+        display: grid;
+        grid-template-columns: 33% 65%;
+        grid-column-gap: 30px;
+        width: 100%;
+        @include rem-fallback(margin-bottom, 30px);
+
+        @include max-large-width {
+            grid-template-columns: repeat(1, 100%);
+            grid-column-gap: 0%;
+        }
+
+        .right {
+            h2 {
+                @include rem-fallback(margin, 0, 0, 10px, 0);
+                font-family: $freight-serif;
+                font-weight: 600;
+                @include rem-fallback(font-size, 24px);
+                line-height: 1.5rem;
+            }
+            p {
+                @include component-p;
+                color: $menu_gray;
+                @include rem-fallback(margin, 0, 0, 10px, 0);
+                
+                a {
+                    @include rem-fallback(padding, 5px, 15px);
+                    color: $berkeley_blue;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                        border-bottom-color: $steel_gray;
+                        color: $steel_gray;
+                    }
+                }
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+        
+                li {
+                    &:before {
+                        @include block-bullet-style;
+                    }
+
+                    @include component-p;
+                }
+            }
+        }
+
+        &.no-image {
+            grid-template-columns: 100%;
+            margin-bottom: 0;
+
+            .right {
+                a {
+                    h2 {
+                        font-family: $freight-serif;
+                        @include rem-fallback(font-size, 30px);
+                        @include rem-fallback(line-height, 20px);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    &.two {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        @include rem-fallback(padding, 30px, 0);
+
+        @include max-large-width {
+            grid-template-columns: repeat(1, 100%);
+        }
+
+        .item {
+            grid-template-columns: 25% 60%;
+            grid-column-gap: 10px;
+
+            @include max-large-width {
+                grid-template-columns: 25% 60%;
+                grid-column-gap: 10px;
+            }
+
+            .right {
+                a {
+                    h2 {
+                        @include rem-fallback(font-size, 19px);
+                        @include rem-fallback(line-height, 19px);
+                    }
+                }
+                p { color: $text_gray; }
+            }
+        }
+    }
+}

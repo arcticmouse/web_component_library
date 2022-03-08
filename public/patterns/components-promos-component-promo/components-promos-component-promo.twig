@@ -1,0 +1,42 @@
+<component class="promo {{ component.background_color }}">
+    {% if component.promo_link %}<a href="{{ component.promo_link }}">{% endif %}
+        <div>
+            <h3>{{ component.title }}</h3>
+            {% if component.promo_message %}<p>{{ component.promo_message }}</p>{% endif %}
+        </div>
+    {% if component.promo_link %}</a>{% endif %}
+</component>       
+
+<component class="promo square {{ component.background_color }}">
+        {% if component.promo_image %}
+            <img src="{{ component.promo_image.url }}" alt="{{ component.promo_image.url }}" />
+        {% endif %}
+        <div>
+            <h3>{{ component.title }}</h3>
+            {% if component.promo_message %}<p>{{ component.promo_message }}</p>{% endif %}
+        </div>
+</component> 
+
+<component class="promo circle {{ component.background_color }}">
+    {% if component.promo_link %}<a href="{{ component.promo_link }}">{% endif %}
+        {% if component.promo_image %}
+            <img src="{{ component.promo_image.url }}" alt="{{ component.promo_image.url }}" />
+        {% endif %}
+        <div>
+            <h3>{{ component.title }}</h3>
+            {% if component.promo_message %}<p>{{ component.promo_message }}</p>{% endif %}
+        </div>
+    {% if component.promo_link %}</a>{% endif %}
+</component> 
+
+<component class="promo branded {{ component.background_color }}">
+    {% if component.promo_link %}<a href="{{ component.promo_link }}">{% endif %}
+        {% if component.promo_image %}
+            <img src="{{ component.promo_image.url }}" alt="{{ component.promo_image.url }}" />
+        {% endif %}
+        <div>
+            <h3>{{ component.title }}</h3>
+            {% if component.promo_message %}<p>{{ component.promo_message }}</p>{% endif %}
+        </div>
+    {% if component.promo_link %}</a>{% endif %}
+</component> 

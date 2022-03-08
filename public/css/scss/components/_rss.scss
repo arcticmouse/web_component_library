@@ -1,0 +1,110 @@
+component {
+
+    &.blog {
+        background-color: $medalist;
+        @include rem-fallback(padding, 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-image: url('../../img/tessellation-bg-04.png'), url('../../img/tessellation-bg-08.png');
+        background-position: right bottom, left bottom;
+        background-repeat: no-repeat, no-repeat;
+
+        .blog-title {
+            color: $white;
+            border-bottom: 1px solid;
+            width: 75%;
+            font-family: $freight-sans;
+            @include rem-fallback(font-size, 12px);
+            font-weight: 700;
+            text-transform: uppercase;
+            @include rem-fallback(letter-spacing, 1px);
+            @include rem-fallback(line-height, 13.2px);
+            @include rem-fallback(padding-bottom, 10px);
+            @include rem-fallback(margin-bottom, 10px);
+
+            a, a:visited {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+        .blog-item {
+            @include rem-fallback(padding, 20px);
+            color: $white;
+            font-family: $freight-serif;
+            @include rem-fallback(font-size, 26px);
+            font-weight: 600;
+            @include rem-fallback(line-height, 18px);
+
+            a, a:visited {
+                color: $white;
+                text-decoration: none;
+            }
+
+            span.item-creator {
+                display: inline-flex;
+                @include rem-fallback(margin-top, 10px);
+                color: $black;
+                font-family: $freight-sans;
+                @include rem-fallback(font-size, 17px);
+                font-weight: 500;
+                @include rem-fallback(line-height, 15px);
+                @include rem-fallback(margin-top, 10px);
+            }
+        }
+    }
+
+    &.rss {
+        a { 
+            text-decoration: none; 
+            &:hover { text-decoration: underline; }
+        }
+
+        .rss-title {
+            color: #fff;
+            font-family: $freight-sans;
+            font-size: .75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .0625rem;
+            line-height: .825;
+        }
+
+        ul.rss-item {
+            list-style: none;
+            padding: 0;
+            
+            @include rem-fallback(margin-bottom, 40px);
+    
+            li {
+                padding: 0 0 1rem 20px;
+                list-style-position: inside;
+                text-indent: -1.5rem;
+
+                &:before {
+                    @include block-bullet-style;
+                }
+
+                a {
+                    span.external-url {
+                        &:before { display: inherit; }
+                    }
+                }
+            }
+        }
+    
+        .rss-more {
+            text-align: center;
+    
+            a {
+                @include rem-fallback(padding, 20px);
+                @include rem-fallback(line-height, 22px);
+                @include rem-fallback(font-size, 15px); 
+                color: $berkeley_blue;
+                border-top: 1px solid $menu_border_gray;
+            }
+        }
+    }
+}

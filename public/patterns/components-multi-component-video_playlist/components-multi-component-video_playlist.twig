@@ -1,0 +1,22 @@
+<component class="video-playlist">
+    
+    <div class="now-playing">
+        <div class="iframe-container">
+        <iframe 
+            id="video-iframe"
+            class="video"
+            src="{{ component.video.v1.vp_youtube_url }}?enablejsapi=1"
+            width="470" height="265" 
+            frameborder="0" 
+        ></iframe>
+        </div>
+    </div>
+    <div class="playlist">
+        {% for v in component.video %}
+            <div class="video{% if loop.first %} active{% endif %}" data-url="{{ v.vp_youtube_url }}">
+                <img class="video-cover" src="{{ v.vp_cover_photo }}">
+                <div class="video-caption">{{ v.vp_caption }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</component>        

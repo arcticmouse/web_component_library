@@ -1,0 +1,587 @@
+/*****homepage hero*****/
+/*****page with hero*****/
+/*****page with band*****/
+header {
+
+	&.Band {
+		grid-template-rows: repeat(5, 45px);
+
+		@include max-small-width { 
+			grid-template-rows: repeat(14, 10px); 
+			transition: all 1s;
+		}
+	}
+
+	&.Hero {
+		grid-template-rows: repeat(11, 45px);
+
+		@include max-small-width { 
+			grid-template-rows: repeat(40, 10px); 
+			transition: grid-template-rows 1s;
+		}
+
+		&.takeover {
+			.content-container {
+				grid-column: 1/100;
+
+				.navigation {
+					#main-nav { 
+						z-index: 98; 
+						#mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link { color: $white; }
+						@include min-med-width {
+							#mega-menu-wrap-main.mega-menu-wrap, #mega-menu-wrap-main {
+								background: none;
+								ul#mega-menu-main {
+									li.mega-menu-item {
+										a.mega-menu-link {
+											color: $white;
+											&:hover { border-color: $white; }
+										}
+									}
+								}
+							}
+						}
+						@include max-small-width {
+							#mega-menu-wrap-main.mega-menu-wrap, #mega-menu-wrap-main {
+								background: none;
+								ul#mega-menu-main {
+									li.mega-menu-item {
+										a.mega-menu-link {
+											color: $berkeley_blue;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.hero.homepage {
+				grid-row: 1/14;
+				grid-column: 1/100;
+
+				@include max-small-width { grid-row: 8/41; }
+			}
+		}
+	}
+
+	@include max-small-width {
+		&.on,
+		&.takeover.on { 
+			grid-template-rows: repeat(109, 10px); 
+			>.content-container {
+				grid-row: 1/82;
+	
+				.mobile-header { grid-row: 1; }
+				.navigation {
+					display: grid;
+					grid-row: 2;
+				}
+			}
+			>.hero.homepage {
+			   grid-row: 82/109;
+		   }
+		}
+
+		&.Band.on {
+			grid-template-rows: repeat(89, 10px);
+			>.page-header-band.page {
+				grid-row: 82/89;
+			}
+		}
+	}	
+
+	display: grid;
+	width: 100%;
+	margin: 0 0;
+	grid-template-columns: 1fr;
+
+	border-top: 45px solid $berkeley_blue;
+
+	@include max-small-width { border-top: 4px solid $berkeley_blue; }
+
+	.mobile-header {
+		display: none;
+
+		@include max-small-width {
+			grid-row: 1;
+
+			display: grid;
+			align-content: center;
+
+			.navbar-header {
+				grid-row: 1 / 8;
+				display: grid;
+				grid-template-columns: 120px auto 65px;
+				grid-template-areas: "title . menu";
+
+				.title {
+					grid-area: title;
+
+					.logo { display: inline-block; }
+				}
+				.menu {
+					grid-area: menu;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					@include rem-fallback(margin-top, 10px);
+					border: none;
+					background-color: $white;
+					@include rem-fallback(width, 45px);
+					z-index: 99;
+					&:active {
+						transition: all 5s ease-in-out;
+					}
+					.icon-bar {
+						background: $berkeley_blue;
+						display: block;
+						@include rem-fallback(width, 30px);
+						@include rem-fallback(height, 2px);
+						border-radius: 3px;
+						@include rem-fallback(margin, 3px, 0);
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	.content-container {
+		grid-row: 1/4;
+		@include max-med-width { grid-row: 1/4; }
+		@include max-small-width {
+			display: grid;
+			grid-template-rows: 70px 673px;
+		}
+
+		.navigation {
+			display: grid;
+			grid-template-rows: 34px 145px;
+			grid-template-columns: repeat(100, 1fr);
+
+			@include rem-fallback(margin-top, -45px);
+
+			@include max-med-width { grid-template-rows: 45px 135px; }
+			@include max-small-width {
+				display: none;
+				@include rem-fallback(margin-top, 0px);
+				grid-template-rows: 71px 116px 258px 228px;
+			}
+
+			.left-toolbar, .right-toolbar {
+				display: flex;
+				justify-content: space-between;
+				list-style-type: none;
+				color: $white;
+				margin-top: 0.7rem;
+				padding: 0;
+
+				>li {
+					>a {
+						@include rem-fallback(font-size, 13px);
+						color: $white;
+						text-decoration: none;
+						font-weight: 600;
+						@include rem-fallback(line-height, 20px);
+						font-family: $freight-sans;
+
+						@include max-med-width { @include rem-fallback(font-size, 11px); }
+
+						@include max-small-width {
+							font-size: 0.875rem;
+							background-color: $berkeley_blue;
+							padding: 0.8125rem 0.3rem;
+							margin: 0.3rem;
+							display: flex;
+							justify-content: center;
+							border-radius: 0.25rem;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+
+			.left-toolbar {
+				grid-row: 1;
+				grid-column: 1/29;
+
+				@include max-large-width { grid-column: 1/39; }
+
+				@include max-med-width { margin-top: .2rem; }
+
+				@include max-small-width {
+					grid-row: 4;
+
+					margin-top: -1rem;
+					grid-column: 1/100;
+					flex-flow: column;
+
+					&:before {
+						content: "INFORMATION FOR...";
+						text-transform: uppercase;
+						color: #003262;
+						@include rem-fallback(padding, 20px, 13px, 15px, 6px);
+						@include rem-fallback(font-size, 12px);
+						font-weight: 700;
+						@include rem-fallback(letter-spacing, 1px);
+						background-color: $mobile-menu-background;
+					}
+				}
+
+				li {
+					&:first-child {
+						padding-left: 0;
+					}
+
+					@include max-med-width {
+						&:last-child { display: none; }
+					}
+					@include min-med-width {
+						&:last-child { display: block; }
+					}
+					@include max-small-width {
+						&:last-child { display: block; }
+					}
+				}
+				>li {
+					@include rem-fallback(padding, 10px);
+
+					@include min-med-width { @include rem-fallback(padding, 2px); }
+					@include small-to-med-width { @include rem-fallback(padding, 10px, 0px); }
+					@include max-small-width { padding: 0; }
+
+					&:last-child {
+						>a {
+							@include max-small-width { border-bottom: none; }
+						} 
+					}
+				}
+			}
+
+			.right-toolbar {
+				grid-row: 1;
+				grid-column: 54/82;
+
+				@include max-large-width { grid-column: 49/77; }
+
+				@include max-med-width {
+					grid-column: 40/70;
+					margin-top: .2rem;
+				}
+				@include max-small-width {
+					grid-row: 2;
+					grid-column: 1/100;
+					align-items: flex-start;
+					flex-wrap: wrap;
+					height: 100%;
+				}
+
+				>li {
+					@include rem-fallback(padding, 10px);
+
+					@include min-med-width { @include rem-fallback(padding, 2px); }
+					@include small-to-med-width { @include rem-fallback(padding, 10px, 0px); }
+					@include max-small-width {
+						width: 50%;
+						padding: 0rem;
+						text-align: center;
+					}
+				}
+			}
+
+			form#navbar-search.navbar-form {
+				grid-row: 1;
+				grid-column: 82/100;
+				justify-self: end;
+
+	      		display: flex;
+				justify-content: flex-end;
+				padding: 0;
+				@include rem-fallback(margin, 6px, 0, 5px, 15px);
+				@include rem-fallback(width, 200px);
+				@include rem-fallback(font-size, 14px);
+				font-family: 'Open Sans',sans-serif;
+				@include rem-fallback(line-height, 22px);
+
+				@include max-large-width { grid-column: 77/100; }
+				@include max-med-width { grid-column: 72/100; }
+				@include max-small-width {
+					grid-row: 1;
+					grid-column: 1/100;
+					width: 100%;
+				}
+
+				.form-group {
+					@include max-small-width { flex-grow: 1; }
+
+					input.form-control {
+						border-radius: 4px;
+						border: none;
+						background-color: $site_background;
+						box-shadow: inset 0 0px 1px rgba(0,0,0,0.2);
+						@include rem-fallback(height, 32px);
+						@include rem-fallback(width, 178px);
+						@include rem-fallback(font-size, 14px);
+						@include rem-fallback(padding-left, 15px);
+
+						@include max-small-width {
+							background-color: $white_gray;
+							width: 100%;
+							height: 2.75rem;
+							color: $text_gray;
+						}
+					}
+
+				}
+
+				button.btn-default {
+					display: inline;
+					@include rem-fallback(padding, 7px, 9px);
+					@include rem-fallback(margin-left, -5px);
+					border: none;
+					@include rem-fallback(height, 32px);
+					border-radius: 4px;
+					@include rem-fallback(font-size, 16px);
+
+					@include max-small-width { display: none; }
+				}
+
+	    	}
+
+			.title {
+				grid-row: 2;
+				grid-column: 1/21;
+				align-self: center;
+
+				@include rem-fallback(max-width, 240px);
+				padding: 0;
+				@include rem-fallback(margin-top, 12px);
+				z-index: 99;
+
+				@include max-small-width { display: none; }
+
+				img {
+					width: 100%;
+					@include rem-fallback(margin-left, -10px);
+				}
+			}
+
+			#main-nav.menu {
+				grid-row: 2;
+				grid-column: 1/100;
+				align-self: center;
+
+				@include max-small-width {
+					grid-row: 3;
+					grid-column: 1/100;
+
+					ul#mega-menu-main {
+						>li.mega-menu-item {
+							>a.mega-menu-link {
+								border-bottom: 1px solid $white_gray;
+							}
+							&:last-child { >a.mega-menu-link { border-bottom: none; } }
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+
+	/*****homepage hero*****/
+	.hero.homepage {
+		grid-column: 1 / 12;
+		grid-row: 4 / 14;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+
+		&.center { background-position: 50% 50%; }
+		&.left { background-position: 0% 50%; }
+		&.right { background-position: 100% 50%; }
+		&.top { background-position: 50% 0%; }
+		&.bottom { background-position: 50% 100%; }
+
+		@include max-med-width { grid-row: 4/14; }
+		@include max-small-width { grid-row: 8/41; }
+
+		a { text-decoration: none; }
+
+		.content-container {
+			@include max-small-width { display: inline; }
+
+			.caption {
+				width: 50%;
+				height: 70%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				flex-direction: column;
+				flex-wrap: wrap;
+
+				@include max-small-width {
+					width: 75%;
+					height: 90%;
+				}
+
+				>h2 {
+					margin: 0;
+					@include rem-fallback(padding, 0px, 10px);
+					align-self: flex-start;
+					font-family: $freight-serif;
+					@include rem-fallback(font-size, 54px);
+					font-weight: 400;
+					@include rem-fallback(line-height, 22px);
+					@include rem-fallback(margin-bottom, 2px);
+					color: $white;
+
+					@include max-med-width {
+						@include rem-fallback(font-size, 44px);
+						line-height: 1;	
+					}
+
+					@include max-small-width {
+						@include rem-fallback(margin-bottom, 2px);
+						display: inline;
+						position: relative;
+						@include rem-fallback(font-size, 28px);
+						line-height: 1.5;
+						@include rem-fallback(left, 14px);
+						box-decoration-break: clone;
+						color: $white;
+					}
+
+				}
+				>p {
+					margin: 0;
+					align-self: flex-start;
+					@include rem-fallback(font-size, 22px);
+					line-height: 1.5;
+					color: $white;
+
+					@include max-small-width {
+						@include rem-fallback(font-size, 14px);
+						@include rem-fallback(line-height, 34px);
+						display: inline;
+						position: relative;
+						@include rem-fallback(left, 14px);
+					}
+					>span {
+						box-decoration-break: clone;
+						@include rem-fallback(padding, 0px, 10px);
+
+						@include max-small-width { @include rem-fallback(padding, 0px, 10px); }
+					}
+				}
+			}
+		}
+
+		.credit {
+			@include rem-fallback(font-size, 11px);
+			@include rem-fallback(padding, 5px);
+			font-style: italic;
+			color: $white;
+			background-color: $grey_background;
+			position: absolute;
+			left: 0;
+			@include rem-fallback(bottom, 5px);
+		}
+	}
+
+	
+
+	/*****page with hero*****/
+	.page-header-hero.page {
+		grid-column: 1 / 12;
+		grid-row: 4 / 12;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+
+		@include max-med-width { grid-row: 4/14; }
+		@include max-small-width { grid-row: 8/41; }
+
+		.content-container {
+			@include max-small-width { display: inline; }
+
+			.caption {
+				width: 50%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				flex-wrap: wrap;
+
+				@include max-small-width {
+					width: 75%;
+					height: 90%;
+				}
+
+				>h1 {
+					display: flex;
+					margin: 0;
+					@include rem-fallback(padding, 0px, 10px);
+					align-self: flex-start;
+					font-family: $freight-serif;
+					@include rem-fallback(font-size, 54px);
+					font-weight: 400;
+					@include rem-fallback(line-height, 78px);
+					@include rem-fallback(margin-bottom, 2px);
+					color: $white;
+
+					@include max-small-width {
+						@include rem-fallback(margin-bottom, 2px);
+						display: inline;
+						position: relative;
+						@include rem-fallback(font-size, 28px);
+						@include rem-fallback(line-height, 42px);
+						@include rem-fallback(left, 14px);
+						box-decoration-break: clone;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	/*****page with band*****/
+	.page-header-band.page {
+		grid-column: 1 / 12;
+		grid-row: 4 / 6;
+
+		background-image: url('../../img/tessellation-bg-12.png');
+		background-repeat: no-repeat;
+		background-position: right center;
+
+		@include max-small-width { grid-row: 8 / 15; }
+
+		.content-container {
+			display: flex;
+			align-items: center;
+
+			>h1 {
+				margin: 0px;
+				font-family: $freight-serif;
+				@include rem-fallback(font-size, 52px);
+				font-weight: 400;
+				line-height: 1.1;
+				color: $white;
+
+				@include max-small-width {
+					display: inline;
+					position: relative;
+					@include rem-fallback(font-size, 36px);
+					@include rem-fallback(left, 14px);
+					box-decoration-break: clone;
+					color: $white;
+				}
+			}
+		}
+	}
+}

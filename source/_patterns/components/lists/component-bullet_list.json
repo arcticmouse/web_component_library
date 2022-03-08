@@ -1,0 +1,40 @@
+{
+    "component": {
+        "h2_header": true,
+        "bullet_more_link": "https://berkeley.edu",
+        "bullet_items": {
+            "item": {
+                "item_text": "This is a regular link",
+                "item_links": {
+                    "item_url": "https://news.berkeley.edu"
+                }
+            },
+            "item2": {
+                "item_text": "This is a phone number link",
+                "item_links": {
+                    "item_telephone_number": "202-555-0106"
+                }
+            },
+            "item3": {
+                "item_text": "This is an email link",
+                "item_links": {
+                    "item_email": "no_way@berkeley.edu"
+                }
+            }
+        },
+        "component_no_bullet": {
+            "bullet_title": "Bullet List No Bullets",
+            "show_bullets": false
+        },
+        "component_arrow_bullets": {
+            "bullet_title": "Bullet List Arrow Bullets",
+            "show_bullets": true,
+            "bullet_type": "bullets"
+        },
+        "component_dot_bullets": {
+            "bullet_title": "Bullet List Dots",
+            "show_bullets": true,
+            "bullet_type": "dot"
+        }
+    }
+}

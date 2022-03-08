@@ -1,0 +1,29 @@
+<component class="block infographic Pie{% if not component.infographic_link %} grid-style{% endif %}">
+    {% if component.infographic_link %}<a href="{{ component.infographic_link }}" class="grid-style">{% endif %}
+    <div class="pie-chart" data-total="{{ component.total }}">
+        <svg width="{{ component.svg_height_width }}" height="{{ component.svg_height_width }}">
+            {% for slice in component.slices %}
+                <circle 
+                r="{{ component.radius }}" 
+                cx="{{ component.cxcy }}" 
+                cy="{{ component.cxcy }}" 
+                stroke-width="{{ component.strokewidth }}"
+                class="circle {{ slice.color }}" 
+                title="{{ slice.value }}"
+                {% if not loop.first %}stroke-dasharray="{{ slice.dash_array }}"{% endif %}>
+                </circle>
+            {% endfor %}
+        </svg>
+    </div>
+
+    <div class="pie-key">
+    <ul>
+    {% for slice in component.slices %}
+        <li class="key {{ slice.color }}">{{ slice.label }} {{ slice.value|number_format }}</li>
+    {% endfor %}
+    </ul>
+    </div>
+
+    <div class="caption">{{ component.infographic_caption }}{% if component.infographic_link %}{{ component.infographic_link }}{% endif %}</div>
+    {% if component.infographic_link %}</a>{% endif %}
+</component>

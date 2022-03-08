@@ -1,0 +1,18 @@
+{ 
+  "bodyClass": "page-template-page-two_column_thumblist",
+  "lead_text": "Optional Lead Text",
+  "add_lead_text": "Optional Additional Lead Text",
+  "content": "<p>This is content. It takes up the full page width.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas mattis lectus, vitae cursus purus rutrum at. Maecenas ullamcorper convallis dolor a hendrerit. Suspendisse finibus neque eu metus fringilla porttitor. Cras sit amet molestie ex, quis semper mauris. Maecenas tincidunt porttitor ipsum non aliquam. Pellentesque non sollicitudin nisi. Donec arcu felis, porttitor nec mattis eu, eleifend eu velit. Proin quis risus faucibus, viverra turpis id, tempus dolor. Etiam sit amet turpis non nunc volutpat tincidunt. Morbi ornare mi efficitur mollis vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean id magna quis tortor malesuada placerat at at ex. In et elit eget ligula ullamcorper eleifend. Sed nec ante nec est ultrices sagittis sed ut augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+  <p>Vivamus sagittis at nisl eget efficitur. Nam a risus elit. Maecenas tempor at est eu pretium. Nunc molestie mi eget purus euismod luctus. Pellentesque mi quam, dignissim ut molestie nec, consequat sit amet mauris. Maecenas dictum interdum mi, id venenatis lectus interdum dignissim. Maecenas gravida mattis tristique. Vestibulum et orci ut ante tempor luctus. Mauris et massa porta, placerat augue vitae, sodales lorem. Morbi venenatis enim id placerat tempor. Maecenas venenatis dui quis est dictum, ut feugiat est mollis. Phasellus ut mauris mauris. Mauris mi augue, ornare ut fringilla eget, accumsan eget lorem. Praesent viverra est at massa posuere accumsan. Integer tincidunt tincidunt magna, a maximus purus egestas id.</p>
+  <p>Morbi ornare, augue at accumsan faucibus, nisi felis dictum erat, sit amet pellentesque est eros et orci. Donec luctus vestibulum vestibulum. Suspendisse ultrices dignissim nunc, quis facilisis dui fermentum eu. In malesuada condimentum enim id consequat. Maecenas neque dui, pretium id ultricies at, molestie id ante. Maecenas scelerisque orci sed neque condimentum sagittis. Donec malesuada blandit ex, nec tempor magna condimentum quis. Etiam nec sem et nunc faucibus blandit. Duis ac ante eu quam tempus sagittis id nec odio. Maecenas imperdiet, purus sit amet dignissim egestas, ipsum arcu faucibus est, in interdum magna turpis sed lectus. Etiam sagittis finibus gravida.</p>",
+  "component_video":{
+    "modal_class": "videoComponentModal",
+    "video_image": "../../images/sathergate.jpg",
+    "video_credit": "UC Berkeley",
+    "video_caption": "Welcome New Bears!",
+    "video_id": "7-DhdMJYvCU",
+    "site_url": "https://berkeley.edu",
+    "video_url": "https://www.youtube.com/watch?v=7-DhdMJYvCU&ab_channel=UCBerkeley"
+  }     
+}

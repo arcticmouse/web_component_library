@@ -1,0 +1,155 @@
+/*****homepage hero*****/
+.hero.homepage {
+    grid-column: 1 / 12;
+    grid-row: 4 / 14;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &.center { background-position: 50% 50%; }
+    &.left { background-position: 0% 50%; }
+    &.right { background-position: 100% 50%; }
+    &.top { background-position: 50% 0%; }
+    &.bottom { background-position: 50% 100%; }
+
+    @include max-med-width { grid-row: 4/14; }
+    @include max-small-width { grid-row: 8/41; }
+
+    a { text-decoration: none; }
+
+    .content-container {
+        @include max-small-width { display: inline; }
+
+        .caption {
+            width: 50%;
+            height: 70%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            @include max-small-width {
+                width: 75%;
+                height: 90%;
+            }
+
+            >h2 {
+                margin: 0;
+                @include rem-fallback(padding, 0px, 10px);
+                align-self: flex-start;
+                font-family: $freight-serif;
+                @include rem-fallback(font-size, 54px);
+                font-weight: 400;
+                @include rem-fallback(line-height, 22px);
+                @include rem-fallback(margin-bottom, 2px);
+                color: $white;
+
+                @include max-med-width {
+                    @include rem-fallback(font-size, 44px);
+                    line-height: 1;	
+                }
+
+                @include max-small-width {
+                    @include rem-fallback(margin-bottom, 2px);
+                    display: inline;
+                    position: relative;
+                    @include rem-fallback(font-size, 28px);
+                    line-height: 1.5;
+                    @include rem-fallback(left, 14px);
+                    box-decoration-break: clone;
+                    color: $white;
+                }
+
+            }
+            >p {
+                margin: 0;
+                align-self: flex-start;
+                @include rem-fallback(font-size, 22px);
+                line-height: 1.5;
+                color: $white;
+
+                @include max-small-width {
+                    @include rem-fallback(font-size, 14px);
+                    @include rem-fallback(line-height, 34px);
+                    display: inline;
+                    position: relative;
+                    @include rem-fallback(left, 14px);
+                }
+                >span {
+                    box-decoration-break: clone;
+                    @include rem-fallback(padding, 0px, 10px);
+
+                    @include max-small-width { @include rem-fallback(padding, 0px, 10px); }
+                }
+            }
+        }
+    }
+
+    .credit {
+        @include rem-fallback(font-size, 11px);
+        @include rem-fallback(padding, 5px);
+        font-style: italic;
+        color: $white;
+        background-color: $grey_background;
+        position: absolute;
+        left: 0;
+        @include rem-fallback(bottom, 5px);
+    }
+}
+
+
+
+/*****page with hero*****/
+.page-header-hero.page {
+    grid-column: 1 / 12;
+    grid-row: 4 / 12;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include max-med-width { grid-row: 4/14; }
+    @include max-small-width { grid-row: 8/41; }
+
+    .content-container {
+        @include max-small-width { display: inline; }
+
+        .caption {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            @include max-small-width {
+                width: 75%;
+                height: 90%;
+            }
+
+            >h1 {
+                display: flex;
+                margin: 0;
+                @include rem-fallback(padding, 0px, 10px);
+                align-self: flex-start;
+                font-family: $freight-serif;
+                @include rem-fallback(font-size, 54px);
+                font-weight: 400;
+                @include rem-fallback(line-height, 78px);
+                @include rem-fallback(margin-bottom, 2px);
+                color: $white;
+
+                @include max-small-width {
+                    @include rem-fallback(margin-bottom, 2px);
+                    display: inline;
+                    position: relative;
+                    @include rem-fallback(font-size, 28px);
+                    @include rem-fallback(line-height, 42px);
+                    @include rem-fallback(left, 14px);
+                    box-decoration-break: clone;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

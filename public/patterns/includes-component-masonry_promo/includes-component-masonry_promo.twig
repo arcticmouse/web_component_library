@@ -1,0 +1,11 @@
+<component class="masonry promo {{ component.color }} {% if not component.traditions_promo_img_src %}no-image{% endif %}">
+    {% if component.traditions_promo_link %}<a href="{{ component.traditions_promo_link }}" />{% endif %}
+    {% if component.traditions_promo_img_src %}
+        <img src="{{ component.traditions_promo_img_src }}" alt="{{ component.traditions_promo_img_alt }}" />
+    {% endif %}        
+    <div>
+        <h3>{{ component.traditions_promo_heading }}</h3>
+        <p>{{ component.traditions_promo_text }}</p>
+    </div>
+    {% if component.traditions_promo_link %}</a>{% endif %}
+</component>        

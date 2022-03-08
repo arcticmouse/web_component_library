@@ -1,0 +1,63 @@
+<component class="masonry video">
+    <a href="#" class="modal {{ component.modal_class }}">
+    <div class="overlay fonta fas fa-play">
+        <img src="{{ component.video_image }}">
+    </div>
+    <div class="caption">
+        <h3>{{ component.video_caption }}</h3>
+    </div>
+</a>
+<div role="dialog" 
+        id="{{ component.modal_class }}" 
+        aria-modal="true" 
+        aria-describedby="{{ component.modal_class }}" 
+        aria-labelledby="{{component.modal_class}}" 
+        class="modal-window hidden"
+        tabindex="-1">
+    <div class="modal-content" role="document">
+        <div class="modal-head">
+            <div class="title">
+                {% if component.video_caption %}
+                    <h4 tabindex="0">{{ component.video_caption }}</h4>
+                {% endif %} 
+            </div>  
+            <button id="{{ component.modal_class }}_close" class="{{ component.modal_class }} close" aria-label="close" tabindex="0">X</button>             
+            {% if component.video_transcript %}
+                <div class="transcript"><a href="{{ component.video_transcript }}">
+                    [ Transcript 
+                    {% if component.video_t_location == "file" %}(file download){% endif %}
+                    {% if component.video_t_location == "page" %}(external link){% endif %}
+                    ]
+                </a></div>
+            {% endif %} 
+        </div>
+        <div class="modal-body">
+            <iframe 
+                id="{{ component.video_id }}"
+                style="flex:1;"
+                title="YouTube video player" 
+                allowfullscreen 
+                src="https://www.youtube.com/embed/{{ component.video_id }}?autoplay=0&amp;modestbranding=1&amp;enablejsapi=1" 
+                name="{{ component.video_id }}"
+                tabindex="0">
+            </iframe>
+            <div class="email" aria-hidden="true">
+                <p>To share this video via email, copy and paste the message and URL below into your favorite email client and send.<p>
+                <pre>
+                    Check out this video I saw on {{ component.site_url }}
+
+                    {{ component.video_caption }}
+
+                    {{ component.video_url }}
+                </pre>
+            </div>
+        </div>
+        <div class="modal-footer" tabindex="0" name="{{ component.video_caption }}" data-url="{{ component.video_url }}">
+            <button class="sharetwitter"><span class="fab fa-twitter fonta-social"></span><span class="screen-reader">Twitter</span></button>
+            <button class="sharefacebook"><span class="fab fa-facebook-f fonta-social"></span><span class="screen-reader">Facebook</span></button>
+            <button class="shareemail"><span class="fal fa-envelope fonta-social"></span><span class="screen-reader">Email</span></button>
+            <button class="{{ component.modal_class }} close-video-modal close"></button>
+        </div>
+    </div>
+</div>
+</component>        

@@ -1,0 +1,179 @@
+html {
+  font-size: $base-font-size; 
+  
+  body {
+    margin:0;
+    background-color: $site_background;
+    font-family: $freight-sans;
+
+    a.skip-link {
+      @include rem-fallback(height, 1px);
+      @include rem-fallback(width, 1px);
+      @include rem-fallback(margin, -1px);
+      position: absolute;
+      overflow: hidden;
+      color: #ffffff;
+      display: block;
+      background-color: $berkeley-blue;
+
+      &:focus, &:focus-within {
+        color: #fff;
+        @include rem-fallback(font-size, 16px);
+        @include rem-fallback(padding, 6px, 12px);
+        display: block;
+        background-color: $berkeley-blue;
+        height: 1rem;
+        width: 100%;
+        position: relative;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: $berkeley-blue;
+
+      &:hover { color: $text_gray; }
+
+      span.external-url, span.file-url {
+        text-decoration: none;
+        padding: 2px 0;
+
+        &:before {
+          @include rem-fallback(font-size, 8px);
+          vertical-align: middle;
+          display: inline-block;
+        }
+
+        span.invisible {
+          position: absolute;
+          overflow: hidden;
+          height: 1px;
+        }
+
+        &:after {
+          margin-left: .1rem;
+          opacity: .7;
+        }
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      text-transform: none;
+      color: #003262;
+      letter-spacing: 0;
+    }
+    
+    h1, .h1, h2, .h2, h3, .h3 {
+      @include rem-fallback(margin-top, 20px);
+      @include rem-fallback(margin-bottom, 10px);
+    }
+
+    h1 {
+      @include rem-fallback(font-size, 36px);
+      font-family: $freight-serif;
+    }
+    h2 {
+      @include rem-fallback(font-size, 30px);
+      font-family: $freight-serif;
+    }
+    h3 {
+      @include h3-mixin;
+    }
+    h4 {
+      @include rem-fallback(font-size, 18px);
+    }
+    h5 {
+      @include rem-fallback(font-size, 14px);
+    }
+    h6 {
+      @include rem-fallback(font-size, 12px);
+    }    
+    
+    hr {
+      border: 0;
+      border-top-color: currentcolor;
+      border-top-style: none;
+      border-top-width: 0px;
+    
+      border-top: 1px solid #eee;
+    
+      width: 70%;
+      @include rem-fallback(margin-top, 0px);
+      @include rem-fallback(margin-bottom, 0px);
+    }
+    
+    img { width: 100%; }
+
+    .hidden { display: none; }
+    
+    .screen-reader {
+      display: block !important;
+      left: -9999rem !important;
+      position: absolute !important;
+    }
+    
+    .sr-only {
+      position: absolute;
+      @include rem-fallback(width, 1px);
+      @include rem-fallback(height, 1px);
+      @include rem-fallback(margin, -1px);
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }   
+    
+    .pie-tooltip {
+      position: absolute !important;
+      background-color: $black !important;
+      color: $white !important;
+      padding: .5rem;
+      border-radius: 5px;
+      font-family: $freight-sans;
+      font-size: 1rem;
+    }
+
+    .content-container {
+      width: 95%;
+      @include rem-fallback(max-width, 1170px);
+      height: 100%;
+      margin: auto auto;
+    
+      @include max-small-width {
+        .content-container { max-width: auto; }
+      }
+      @include min-small-width {
+        .content-container { max-width: #{pxToRem(768px)}rem; }
+      }
+      @include min-med-width {
+        .content-container { max-width: #{pxToRem(970px)}rem; }
+      }
+      @include min-large-width {
+        .content-container { max-width: #{pxToRem(1170px)}rem; }
+      }
+
+      .content {
+        .basic-content {
+          ul {
+            list-style: none;
+            @include rem-fallback(padding, 0px);
+      
+            li {
+              @include rem-fallback(padding, 10px, 0px, 0px, 0px);
+              @include rem-fallback(line-height, 16px);
+      
+              &:before {
+                @include block-bullet-style;
+              }
+            }
+          }
+        }
+
+        table.table-bordered { 
+          thead, tbody, tr, td { border: 1px solid $menu_border_gray;  }
+        }
+      }
+    }
+
+  }
+}

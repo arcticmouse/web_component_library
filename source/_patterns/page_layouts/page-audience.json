@@ -1,0 +1,44 @@
+{
+    "bodyClass": "page-template-page-audience",
+    "lead_text": "Optional Lead Text",
+    "add_lead_text": "Optional Additional Lead Text",    
+    "thumblist":{
+        "thumblist_col_number": "two",
+        "thumblist_items": {
+            "item1": {
+                "thumblist_item_image": "../../images/thumblist/by_the_numbers.jpg",
+                "thumblist_item_link": "http://berkeley.edu/about/bythenumbers",
+                "thumblist_item_title": "By the numbers",
+                "thumblist_item_copy": "From faculty awards to the number of books in our libraries, see Berkeley through its facts and figures."
+            },
+            "item2": {
+                "thumblist_item_image": "../../images/thumblist/AboutBerkHistory.jpg",
+                "thumblist_item_link": "http://berkeley.edu/about/history-discoveries",
+                "thumblist_item_title": "History and contributions",
+                "thumblist_item_copy": "The Free Speech Movement, wetsuits, a treatment for malaria and earthquake science. You might be surprised to learn what Berkeley has contributed to the world."
+            },
+            "item3": {
+                "thumblist_item_image": "../../images/thumblist/experience_berkeley.jpg",
+                "thumblist_item_link": "http://berkeley.edu/about/experience-berkeley",
+                "thumblist_item_title": "Experience Berkeley",
+                "thumblist_item_copy": "Right here, right now. Get a sense for what’s happening on the ground at Berkeley."
+            },
+            "item4": {
+                "thumblist_item_image": "../../images/thumblist/traditions.jpg",
+                "thumblist_item_link": "http://berkeley.edu/about/traditions",
+                "thumblist_item_title": "Traditions",
+                "thumblist_item_copy": "Explore the rites, rituals and rallies that become a part of every Berkeley student’s campus experience."
+            },
+            "item5": {
+                "thumblist_item_image": "../../images/thumblist/visit.jpg",
+                "thumblist_item_link": "http://visit.berkeley.edu/",
+                "thumblist_item_title": "Visit",
+                "thumblist_item_copy": "Ready to see Berkeley for yourself? Find out about daily campus tours, parking and public transportation."
+            }                                                                                    
+        }
+    },
+    "button": {
+        "link": "https://www.lib.berkeley.edu/",
+        "label": "UC Berkeley Library"
+    }
+}

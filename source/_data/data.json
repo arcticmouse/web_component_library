@@ -1,0 +1,121 @@
+{
+  "title": "A Page Header",
+  "band_template_color": "wellman_tile",
+  "header_logo_takeover": "<a class='logo' href='/'><img src='../../images/logo-ucberkeley-white.png'></a>",
+  "menuToolbarLeft": {
+    "one": {
+      "title": "Students",
+      "link": "/"
+    },
+    "two": {
+      "title": "Faculty & Staff",
+      "link": "/"
+    },
+    "three": {
+      "title": "Parents",
+      "link": "/"
+    },  
+    "four": {
+      "title": "Alumni",
+      "link": "/"
+    }          
+  },
+  "menuToolbarRight": {
+    "one": {
+      "title": "Map",
+      "link": "/"
+    },
+    "two": {
+      "title": "Directory",
+      "link": "/"
+    },
+    "three": {
+      "title": "bConnected",
+      "link": "/"
+    },  
+    "four": {
+      "title": "News",
+      "link": "/"
+    }          
+  },
+  "footer_logo": "../../images/logo-ucberkeley-white.png",
+  "footerCopyrightText": "Copyright @ 2021 UC Regents; all rights reserved",
+  "menuFooterPrimary": {
+    "one": {
+      "title": "Visit",
+      "link": "/"
+    },
+    "two": {
+      "title": "Jobs",
+      "link": "/"
+    },
+    "three": {
+      "title": "News",
+      "link": "/"
+    },  
+    "four": {
+      "title": "Blogs",
+      "link": "/"
+    },
+    "five": {
+      "title": "Events",
+      "link": "/"
+    },
+    "six": {
+      "title": "Give",
+      "link": "/"
+    }        
+  },
+  "menuFooterSecondaryLeft": {
+    "one": {
+      "title": "Libraries",
+      "link": "/"
+    },
+    "two": {
+      "title": "Cal Athletics",
+      "link": "/"
+    },
+    "three": {
+      "title": "Equity, Inclusion & Diversity",
+      "link": "/"
+    },  
+    "four": {
+      "title": "Accreditation",
+      "link": "/"
+    },
+    "five": {
+      "title": "Light the Way",
+      "link": "/"
+    },
+    "six": {
+      "title": "CAREA Act Report",
+      "link": "/"
+    }        
+  },  
+  "menuFooterSecondaryRight": {
+    "one": {
+      "title": "Websites A-Z",
+      "link": "/"
+    },
+    "two": {
+      "title": "Directory",
+      "link": "/"
+    },
+    "three": {
+      "title": "Map",
+      "link": "/"
+    },  
+    "four": {
+      "title": "Contact Us",
+      "link": "/"
+    },
+    "five": {
+      "title": "Privacy policy",
+      "link": "/"
+    },
+    "six": {
+      "title": "CAREA Act Report",
+      "link": "/"
+    }        
+  }
+}

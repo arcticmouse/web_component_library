@@ -1,0 +1,33 @@
+.page-header-band.page {
+    grid-column: 1 / 12;
+    grid-row: 4 / 6;
+
+    background-image: url('../../img/tessellation-bg-12.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    @include max-small-width { grid-row: 8 / 15; }
+
+    .content-container {
+        display: flex;
+        align-items: center;
+
+        >h1 {
+            margin: 0px;
+            font-family: $freight-serif;
+            @include rem-fallback(font-size, 52px);
+            font-weight: 400;
+            line-height: 1.1;
+            color: $white;
+
+            @include max-small-width {
+                display: inline;
+                position: relative;
+                @include rem-fallback(font-size, 36px);
+                @include rem-fallback(left, 14px);
+                box-decoration-break: clone;
+                color: $white;
+            }
+        }
+    }
+}

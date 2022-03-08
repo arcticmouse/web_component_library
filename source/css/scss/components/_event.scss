@@ -1,0 +1,72 @@
+component.event {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    justify-content: space-between;
+    @include rem-fallback(min-height, 250px);
+    color: $berkeley_blue;
+
+   .event-heading, .event-more {
+    font-family: $freight-sans;
+    @include rem-fallback(font-size, 12px);
+    @include rem-fallback(line-height, 13.2px);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    a, a:visited {
+        color: $berkeley_blue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $black;
+        text-decoration: underline;
+    }
+
+   }
+
+   .event-more { margin-top: 1rem; }
+
+   .event-event {
+       display: grid;
+       grid-template-columns: 13% 80%;
+       grid-column-gap: 3%;
+       justify-items: start;
+
+       .event-date {
+           width: 100%;
+           border-right: 1px solid $menu_border_gray;
+
+           .event-month {
+            @include rem-fallback(font-size, 16px);
+                text-transform: uppercase;
+                @include rem-fallback(line-height, 19px);
+                text-align: center;
+           }
+
+           .event-day {
+                font-weight: 400;
+                @include rem-fallback(font-size, 39px);
+                @include rem-fallback(line-height, 9px);
+                font-family: $freight-serif;
+                text-align: center;
+           }
+       }
+
+       .event-title {
+            display: grid;
+            align-content: center;
+            width: 100%;
+            font-family: $freight-sans;
+            font-weight: 500;
+            @include rem-fallback(font-size, 18px);
+
+            a, a:visited {
+                color: $berkeley_blue;
+                text-decoration: none;
+            }
+
+            a:hover { text-decoration: underline; }
+       }
+   }
+}
